@@ -506,7 +506,7 @@ basemap_bng <- openproj(basemap, projection="+init=epsg:27700")
 Now we can plot our fancy map with the clusters on...
 
 ```{r, cache=TRUE}
-autoplot(basemap_bng) + 
+OpenStreetMap::autoplot.OpenStreetMap(basemap_bng) + 
   geom_point(data=BluePlaquesSubPoints, 
              aes(coords.x1,coords.x2, 
                  colour=dbcluster, 
@@ -536,6 +536,7 @@ Before we get any further, let's get some ward boundaries read in to R --- downl
 
 ```{r, cache=TRUE}
 library(here)
+library(janitor)
 #read the ward data in
 LondonWards <- st_read(here::here("prac6_data", "LondonWards.shp"))
 
@@ -545,14 +546,17 @@ LondonWardsMerged <- st_read(here::here("prac6_data",
                                         "ESRI",
                                         "London_Ward_CityMerged.shp"))%>%
   st_transform(.,27700)
-WardData <- read_csv("https://data.london.gov.uk/download/ward-profiles-and-atlas/772d2d64-e8c6-46cb-86f9-e52b4c7851bc/ward-profiles-excel-version.csv", 
+
+WardData <- read_csv("https://data.london.gov.uk/download/ward-profiles-and-atlas/772d2d64-e8c6-46cb-86f9-e52b4c7851bc/ward-profiles-excel-version.csv",
+                     locale = locale(encoding = "latin1"),
                      na = c("NA", "n/a")) %>% 
   clean_names()
 
 LondonWardsMerged <- LondonWardsMerged %>% 
   left_join(WardData, 
             by = c("GSS_CODE" = "new_code"))%>%
-  distinct(GSS_CODE, ward_name, average_gcse_capped_point_scores_2014)
+  dplyr::distinct(GSS_CODE, .keep_all = T)%>%
+  dplyr::select(GSS_CODE, ward_name, average_gcse_capped_point_scores_2014)
 
 ```
 

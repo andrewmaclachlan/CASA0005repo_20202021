@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 1 Geographic Information | CASA0005 Geographic Information Systems and Science</title>
   <meta name="description" content="The CASA0005 Geographic Information Systems and Science practical book" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 1 Geographic Information | CASA0005 Geographic Information Systems and Science" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://andrewmaclachlan.github.io/CASA0005repo/" />
   <meta property="og:image" content="https://andrewmaclachlan.github.io/CASA0005repo//general_images/casa_logo.png" />
   <meta property="og:description" content="The CASA0005 Geographic Information Systems and Science practical book" />
   <meta name="github-repo" content="andrewmaclachlan/CASA0005repo" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andy MacLachlan and Adam Dennett" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2022-06-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="external-usage.html"/>
 <link rel="next" href="introduction-to-r.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,36 +49,36 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.23/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
 <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
 <script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151934476-1"></script>
@@ -617,10 +616,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="geographic-information" class="section level1" number="1">
-<h1><span class="header-section-number">Chapter 1</span> Geographic Information</h1>
-<div id="learning-outcomes" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Learning outcomes</h2>
+<div id="geographic-information" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> Geographic Information<a href="geographic-information.html#geographic-information" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-outcomes" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Learning outcomes<a href="geographic-information.html#learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By the end of this practical you should be able to:</p>
 <ol style="list-style-type: decimal">
 <li>Describe and explain GIS data formats and databases</li>
@@ -629,8 +628,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>Evaluate the (dis)advantages of each GIS you have used</li>
 </ol>
 </div>
-<div id="homework" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Homework</h2>
+<div id="homework" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Homework<a href="geographic-information.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Outside of our schedulded sessions you should be doing around 12 hours of extra study per week. Feel free to follow your own GIS interests, but good places to start include the following:</p>
 <div class="infobox assignment">
 <p><strong>Assignment</strong></p>
@@ -650,19 +649,19 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 </div>
 </div>
-<div id="recommended-listening" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Recommended listening 🎧</h2>
+<div id="recommended-listening" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Recommended listening 🎧<a href="#recommended-listening" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Some of these practicals are long, take regular breaks and have a listen to some of our fav tunes each week.</p>
 <p><a href="https://open.spotify.com/album/1A3nVEWRJ8yvlPzawHI1pQ">Andy</a>. Week 1. No other choice than Vampire Weekend. The band formed during college (University in the USA) and produced their first album of their own whilst working full time jobs! Incredible. The lead vocalist and guitarist Ezra Koenig was a school teacher in Brooklyn, New York. I’ve seen them a few times at Glastonbuty and in London during which they gave the people what they wanted and took requests from their entire catalogue, really amazing musicians. Note some of the guest appearances in this album as they also might make an apperance later in the term!</p>
 <p><a href="https://open.spotify.com/album/3LVWk5ZlGgFPvTUVSo8EKh?si=0tvDERBmRAOQgyRztZK-iw">Adam</a> OK, it’s week 1, so I’m going in HARD. This week it’s the raver’s raver, the DJ’s DJ. This man is a style icon and so drum &amp; bass it hurts - it’s Voltage! Here he is with his new album, Balance Over Symmetry. This will surprise a lot of people as it’s an eclectic mix of DnB bangers through to some Burial-inspired minimal dubstep. Follow him on <a href="https://www.instagram.com/voltage_uk_/">Instagram</a> and get your ears around his brilliant.</p>
 </div>
-<div id="the-basics-of-geographic-information" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> The Basics of Geographic Information</h2>
+<div id="the-basics-of-geographic-information" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> The Basics of Geographic Information<a href="geographic-information.html#the-basics-of-geographic-information" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Geographic data, geospatial data or geographic information is data that identifies the location of features on Earth. There are two main types of data which are used in GIS applications to represent the real world. <strong>Vectors</strong> that are composed of points, lines and polygons and <strong>rasters</strong> that are grids of cells with individual values…</p>
 <p><img src="prac1_images/rasvec.jpg" width="300pt" style="display: block; margin: auto;" /></p>
 <p>In the above example the features in the real world (e.g. lake, forest, marsh and grassland) have been represented by points, lines and polygons (vector) or discrete grid cells (raster) of a certain size (e.g. 1 x 1m) specifying land cover type.</p>
-<div id="data-types-in-statistics" class="section level3" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> Data types in statistics</h3>
+<div id="data-types-in-statistics" class="section level3 hasAnchor" number="1.4.1">
+<h3><span class="header-section-number">1.4.1</span> Data types in statistics<a href="geographic-information.html#data-types-in-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before we go any further let’s just quick go over the different types of data you might encounter</p>
 <p>Continuous data can be measured on some sort of scale and can have any value on it such as height and weight.</p>
 <p>Discrete data have finite values. It can be numeric such as number of shoes or categorial such as positive or negative.</p>
@@ -673,11 +672,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Binary data is that that can have only two possible outcomes, yes and no or shark and not shark.</p>
 <p><img src="allisonhorst_images/nominal_ordinal_binary.png" width="550pt" style="display: block; margin: auto;" /></p>
 </div>
-<div id="important-gis-data-formats" class="section level3" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Important GIS data formats</h3>
+<div id="important-gis-data-formats" class="section level3 hasAnchor" number="1.4.2">
+<h3><span class="header-section-number">1.4.2</span> Important GIS data formats<a href="geographic-information.html#important-gis-data-formats" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>There are a number of commonly used geographic data formats that store vector and raster data that you will come across during this course and it’s important to understand what they are, how they represent data and how you can use them.</p>
-<div id="shapefiles" class="section level4" number="1.4.2.1">
-<h4><span class="header-section-number">1.4.2.1</span> Shapefiles</h4>
+<div id="shapefiles" class="section level4 hasAnchor" number="1.4.2.1">
+<h4><span class="header-section-number">1.4.2.1</span> Shapefiles<a href="geographic-information.html#shapefiles" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Perhaps the most commonly used GIS data format is the shapefile. Shapefiles were developed by <a href="http://www.esri.com/">ESRI</a>, one of the first and now certainly the largest commercial GIS company in the world. Despite being developed by a commercial company, they are mostly an open format and can be used (read and written) by a host of GIS Software applications.</p>
 <p>A shapefile is actually a collection of files —- at least three of which are needed for the shapefile to be displayed by GIS software. They are:</p>
 <ol style="list-style-type: decimal">
@@ -688,12 +687,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p>On Twitter and want to see the love for shapefiles….have a look at <a href="https://twitter.com/shapefiIe">the shapefile account</a></p>
 </div>
-<div id="geojson" class="section level4" number="1.4.2.2">
-<h4><span class="header-section-number">1.4.2.2</span> GeoJSON</h4>
+<div id="geojson" class="section level4 hasAnchor" number="1.4.2.2">
+<h4><span class="header-section-number">1.4.2.2</span> GeoJSON<a href="geographic-information.html#geojson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>GeoJSON <a href="http://geojson.org/">Geospatial Data Interchange format for JavaScript Object Notation</a> is becoming an increasingly popular spatial data format, particularly for web-based mapping as it is based on JavaScript Object Notation. Unlike a shapefile in a GeoJSON, the attributes, boundaries and projection information are all contained in the same file.</p>
 </div>
-<div id="shapefile-and-geojson" class="section level4" number="1.4.2.3">
-<h4><span class="header-section-number">1.4.2.3</span> Shapefile and GeoJSON</h4>
+<div id="shapefile-and-geojson" class="section level4 hasAnchor" number="1.4.2.3">
+<h4><span class="header-section-number">1.4.2.3</span> Shapefile and GeoJSON<a href="geographic-information.html#shapefile-and-geojson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We’re now going to explore a shapefile (<code>.shp</code> ) and GeoJSON (<code>.geojson</code>) in action.</p>
 <p>Go to: <a href="http://geojson.io/#map=16/51.5247/-0.1339" class="uri">http://geojson.io/#map=16/51.5247/-0.1339</a></p>
 <p><img src="prac1_images/JSONwebsite.png" width="500pt" style="display: block; margin: auto;" /></p>
@@ -703,12 +702,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>Open your two newly saved files in a text editor such as notepad or notepad++. For the shapefile you might have to unzip the folder then open each file individually. What do you notice about the similarities or differences between the two ways that the data are encoded?</li>
 </ol>
 </div>
-<div id="raster-data" class="section level4" number="1.4.2.4">
-<h4><span class="header-section-number">1.4.2.4</span> Raster data</h4>
+<div id="raster-data" class="section level4 hasAnchor" number="1.4.2.4">
+<h4><span class="header-section-number">1.4.2.4</span> Raster data<a href="geographic-information.html#raster-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Most raster data is now provided in GeoTIFF (<code>.tiff</code>) format, which stands for Geostarionary Earth Orbit Tagged Image File. The GeoTIFF data format was created by NASA and is a standard public domain format. All necesary information to establish the location of the data on Earth’s surface is embedded into the image. This includes: map projection, coordinate system, ellipsoid and datum type.</p>
 </div>
-<div id="other-data-formats" class="section level4" number="1.4.2.5">
-<h4><span class="header-section-number">1.4.2.5</span> Other data formats</h4>
+<div id="other-data-formats" class="section level4 hasAnchor" number="1.4.2.5">
+<h4><span class="header-section-number">1.4.2.5</span> Other data formats<a href="geographic-information.html#other-data-formats" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Aforementioned data types and formats are likely to be the ones you predominately encounter. However there are several more used within spatial analysis. These include:</p>
 <p><strong>Vector</strong></p>
 <ul>
@@ -722,34 +721,34 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>There are normally valid reasons for storing data in one of these other formats. For example, BSQ are raster data with a separate text header file (<code>.hdr</code>) providing geographic spatial reference information. Earth observation data often monitors the electromagnetic spectrum in bands. Humans see in the visible range of the spectrum and our vision is composed of red, green and blue wavelengths. If we wanted to analyse just the red wavelength the BSQ format would let us <em>read in</em> only that data. In comparison a GeoTIFF might come with all the data ‘packaged’ in one file and when doing analysis over thousands of images would significantly slow things down. That said you can now often find GeoTIFFs separated in a similar format to BSQ and it’s fairly straightforward to convert between raster formats.</p>
 </div>
-<div id="geodatabase" class="section level4" number="1.4.2.6">
-<h4><span class="header-section-number">1.4.2.6</span> Geodatabase</h4>
+<div id="geodatabase" class="section level4 hasAnchor" number="1.4.2.6">
+<h4><span class="header-section-number">1.4.2.6</span> Geodatabase<a href="geographic-information.html#geodatabase" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A geodatabase is a collection of geographic data held within a database. Geodatabases were developed by ESRI to overcome some of the limitations of shapefiles. They come in two main types: Personal (up to 1 TB) and File (limited to 250 - 500 MB), with Personal Geodatabases storing everything in a Microsoft Access database (<code>.mdb</code>) file and File Geodatabases offering more flexibility, storing everything as a series of folders in a file system. In the example below we can see that the FCC_Geodatabase (left hand pane) holds multiple points, lines, polygons, tables and raster layers in the contents tab.</p>
 <p><img src="prac1_images/geodatabase.png" width="500pt" style="display: block; margin: auto;" /></p>
 </div>
-<div id="geopackage" class="section level4" number="1.4.2.7">
-<h4><span class="header-section-number">1.4.2.7</span> GeoPackage</h4>
+<div id="geopackage" class="section level4 hasAnchor" number="1.4.2.7">
+<h4><span class="header-section-number">1.4.2.7</span> GeoPackage<a href="geographic-information.html#geopackage" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><img src="prac1_images/geopkg.png" width="100pt" style="display: block; margin: auto;" /></p>
 <p>A GeoPackage is an open, standards-based, platform-independent, portable, self-describing, compact format for transferring geospatial data. It stores spatial data layers (vector and raster) as a single file, and is based upon an SQLite database, a widely used relational database management system, permitting code based, reproducible and transparent workflows. As it stores data in a single file it is very easy to share, copy or move.</p>
 </div>
-<div id="spatialite" class="section level4" number="1.4.2.8">
-<h4><span class="header-section-number">1.4.2.8</span> SpatiaLite</h4>
+<div id="spatialite" class="section level4 hasAnchor" number="1.4.2.8">
+<h4><span class="header-section-number">1.4.2.8</span> SpatiaLite<a href="geographic-information.html#spatialite" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><img src="prac1_images/spatialite.png" width="100pt" style="display: block; margin: auto;" /></p>
 <p>SpatialLite is an open-source library that extends SQLite core. Support is fairly limited and most software that supports SpatiaLite also supports GeoPackage, as they both build upon SQLite. It doesn’t have any clear advantage over GeoPackage, however it is unable to support raster data.</p>
 </div>
-<div id="postgis" class="section level4" number="1.4.2.9">
-<h4><span class="header-section-number">1.4.2.9</span> PostGIS</h4>
+<div id="postgis" class="section level4 hasAnchor" number="1.4.2.9">
+<h4><span class="header-section-number">1.4.2.9</span> PostGIS<a href="geographic-information.html#postgis" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><img src="prac1_images/postGIS.jpg" width="100pt" style="display: block; margin: auto;" /></p>
 <p>PostGIS is an opensource database extender for PostrgeSQL. Essentially PostgreSQL is a database and PostGIS is an add on which permits spatial functions. The advantages of using PostGIS over a GeoPackage are that it allows users to access the data at the same time, can handle large data more efficiently and reduces processing time. In <a href="https://medium.com/@GispoLearning/learn-spatial-sql-and-master-geopackage-with-qgis-3-16b1e17f0291">this example</a> calculating the number of bars per neighbourhood in Leon, Mexico the processing time reduced from 1.443 seconds (SQLite) to 0.08 seconds in PostGIS. However, data stored in PostGIS is much harder to share, move or copy.</p>
 </div>
-<div id="what-will-i-use" class="section level4" number="1.4.2.10">
-<h4><span class="header-section-number">1.4.2.10</span> What will I use</h4>
+<div id="what-will-i-use" class="section level4 hasAnchor" number="1.4.2.10">
+<h4><span class="header-section-number">1.4.2.10</span> What will I use<a href="geographic-information.html#what-will-i-use" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>The variety of data formats can see a bit overwhelming. I still have to check how to load some of these data formats that I don’t use frequently. But don’t worry, most of the time you’ll be using shapefiles, GeoPackages or raster data.</p>
 </div>
 </div>
 </div>
-<div id="general-data-flow" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> General data flow</h2>
+<div id="general-data-flow" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> General data flow<a href="geographic-information.html#general-data-flow" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As Grolemund and Wickham state in <a href="https://r4ds.had.co.nz/">R for Data Science</a>…</p>
 <blockquote>
 <p>“Data science is a huge field, and there’s no way you can master it by reading a single book.”</p>
@@ -757,8 +756,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>However, a nice place to start is looking at the typical workflow of a data science (or GIS) project which you will see throuhgout these practicals, which is summarised nicely in this diagram produced by <a href="https://twitter.com/juliesquid">Dr. Julia Lowndes</a> adpted from Grolemund and Wickham.</p>
 <p><img src="allisonhorst_images/environmental_data_science_r4ds_general.png" width="600pt" style="display: block; margin: auto;" /></p>
 <p>To begin you have to <strong>import</strong> your data (not necessarily environmental) into R or someother kind of GIS to acatually be able to do any kind of analysis on it.</p>
-<p>Once imported you might need to <strong>tidy</strong> the data. This really depends on what kind of data it is and we cover this later on in the course. However, putting all of your data into a consistent structure will be very beneficial when you have to do analysis on it — as you can treat it all in the same way. Grolemund and Wickham state that data is tidy when “each column is a variable, and each row is an observation,” we cover this more in next week in the <a href="introduction-to-r.html#tidying-data">Tidying data</a> section.</p>
-<p>When you have (or haven’t) tidied data you then will most likely want to <strong>transform</strong> it. Grolemund and Wickham define this as “narrowing in on observations of interest (like all people in one city, or all data from the last year), creating new variables that are functions of existing variables (like computing speed from distance and time), and calculating a set of summary statistics (like counts or means).” However, from a GIS point of view I would also include putting all of your data into a similar projection, covered next week in <a href="rasters-descriptive-statistics-and-interpolation.html#changing-projections">Changing projections</a> and any other basic process you might do before the core analysis. Arguably these processes could include things such as: clipping (cookie cutting your study area), buffering (making areas within a distance of a point) and intersecting (where two datasets overlap).</p>
+<p>Once imported you might need to <strong>tidy</strong> the data. This really depends on what kind of data it is and we cover this later on in the course. However, putting all of your data into a consistent structure will be very beneficial when you have to do analysis on it — as you can treat it all in the same way. Grolemund and Wickham state that data is tidy when “each column is a variable, and each row is an observation”, we cover this more in next week in the <a href="introduction-to-r.html#tidying-data">Tidying data</a> section.</p>
+<p>When you have (or haven’t) tidied data you then will most likely want to <strong>transform</strong> it. Grolemund and Wickham define this as “narrowing in on observations of interest (like all people in one city, or all data from the last year), creating new variables that are functions of existing variables (like computing speed from distance and time), and calculating a set of summary statistics (like counts or means)”. However, from a GIS point of view I would also include putting all of your data into a similar projection, covered next week in <a href="rasters-descriptive-statistics-and-interpolation.html#changing-projections">Changing projections</a> and any other basic process you might do before the core analysis. Arguably these processes could include things such as: clipping (cookie cutting your study area), buffering (making areas within a distance of a point) and intersecting (where two datasets overlap).</p>
 <p>Tidying and transfrom = data wrangling. Remember from the introduction this could be 50-80% of a data science job!</p>
 <p><img src="allisonhorst_images/dplyr_wrangling.png" width="450pt" style="display: block; margin: auto;" /></p>
 <p>After you have transformed the data the next best thing to do is <strong>visualise</strong> it — even with some basic summary statistics. This simple step will often let you look at your data in a different way and select more appropraite analysis.</p>
@@ -768,17 +767,17 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>In a few weeks come back and revisit this data flow section to see how what you have learnt fits the framework presented.</p>
 </div>
 </div>
-<div id="data" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Data</h2>
+<div id="data" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Data<a href="geographic-information.html#data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The volume of geographic information which is freely available for use in the UK is increasing exponentially and spatially referenced data can often be found in many different places. In this practical we’re going to use data from the London data store — a free and open data-sharing portal provided by the Greater London Authority (GLA), also known as City Hall that is the devolved regional governance body of London.</p>
 <p>We are going to get spatial data of the London boroughs and join flytipping (the illegal deposit of waste, commonly on road verges) data that is provided as a <code>.csv</code> file. <code>.csv</code> stands for comma-separated values (CSV) — it uses a comma to separate each value.</p>
 <p>At the end of this document I’ll also run through some common sources of data that will stand you in good stead (be advantageous) for the rest of the course.</p>
-<div id="file-paths" class="section level3" number="1.6.1">
-<h3><span class="header-section-number">1.6.1</span> File paths</h3>
+<div id="file-paths" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> File paths<a href="geographic-information.html#file-paths" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In your N drive: create a new folder called GIS and within this a sub folder called wk1. It is up to you how you organise your files. Make sure you change the file paths where appropriate to your own.</p>
 </div>
-<div id="data-download" class="section level3" number="1.6.2">
-<h3><span class="header-section-number">1.6.2</span> Data download</h3>
+<div id="data-download" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Data download<a href="geographic-information.html#data-download" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Firstly we need to get a spatial outline of the London boroughs. The geographic boundaries that are used in the UK are a complex, often inter-related, but ever changing mass of areas. For anyone new to the UK (or indeed not a trained quantitative geographer), it can be quite a daunting task to attempt to understand all of the boundaries that are in use. Fortunately the Office for National Statistics (ONS) has an online beginners guide to UK geography. If you need more information on the vast array of different UK geographies, go and explore these resources:</p>
 <ul>
 <li><a href="https://geoportal.statistics.gov.uk/datasets/a31e552c8a214ac2935dbb5701009a64">A Beginners Guide to UK Geography (2019) v1.0</a></li>
@@ -802,8 +801,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Download the <code>.csv</code> file</p></li>
 </ol>
 </div>
-<div id="data-pre-processing" class="section level3" number="1.6.3">
-<h3><span class="header-section-number">1.6.3</span> Data pre-processing</h3>
+<div id="data-pre-processing" class="section level3 hasAnchor" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Data pre-processing<a href="geographic-information.html#data-pre-processing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Question</strong> Open the <code>.csv</code> in Excel, what do you notice about how the data is stored?</p>
 <p><strong>Answer</strong> The year is a column and for each area the values are repeated for different years. In our analysis it is easier to have the different years as a column and populated for each area. So, we want to go from this…</p>
 <p><img src="prac1_images/csv_original.png" width="600pt" style="display: block; margin: auto;" /></p>
@@ -831,12 +830,12 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="infobox warning">
 <p><strong>Warning</strong> Spatial software does not like file names with spaces or special characters.</p>
 </div>
-<p>Now it’s time to load, inspect and do some basic manipulation of this data. As mentioned in the lecture there are several GIS software ‘types,’ here we will repeat the same process across QGIS and R.</p>
+<p>Now it’s time to load, inspect and do some basic manipulation of this data. As mentioned in the lecture there are several GIS software ‘types’, here we will repeat the same process across QGIS and R.</p>
 </div>
-<div id="qgis-1" class="section level3" number="1.6.4">
-<h3><span class="header-section-number">1.6.4</span> QGIS</h3>
-<div id="load-data" class="section level4" number="1.6.4.1">
-<h4><span class="header-section-number">1.6.4.1</span> Load data</h4>
+<div id="qgis-1" class="section level3 hasAnchor" number="1.6.4">
+<h3><span class="header-section-number">1.6.4</span> QGIS<a href="geographic-information.html#qgis-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="load-data" class="section level4 hasAnchor" number="1.6.4.1">
+<h4><span class="header-section-number">1.6.4.1</span> Load data<a href="geographic-information.html#load-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Search for and open QGIS</li>
 <li>Click on the open data source manager. Just above the word <strong>browser</strong> in the top left of the screen</li>
@@ -861,8 +860,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) close this and go and delete this in the <code>.csv</code> now and reload it or (b) change the number of header lines to discard to 1 in the Record and Fields Options in the screenshot above.</p>
 </div>
 </div>
-<div id="join-data" class="section level4" number="1.6.4.2">
-<h4><span class="header-section-number">1.6.4.2</span> Join data</h4>
+<div id="join-data" class="section level4 hasAnchor" number="1.6.4.2">
+<h4><span class="header-section-number">1.6.4.2</span> Join data<a href="geographic-information.html#join-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Right click on the London boroughs layer &gt; Properties &gt; Joins</li>
 <li>Click the plus button at the bottom of the box</li>
@@ -870,8 +869,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><img src="prac1_images/qgis_join.png" width="500pt" style="display: block; margin: auto;" /></p>
 </div>
-<div id="export-data" class="section level4" number="1.6.4.3">
-<h4><span class="header-section-number">1.6.4.3</span> Export data</h4>
+<div id="export-data" class="section level4 hasAnchor" number="1.6.4.3">
+<h4><span class="header-section-number">1.6.4.3</span> Export data<a href="geographic-information.html#export-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Now let’s export to a GeoPackage.</p>
 <ol style="list-style-type: decimal">
 <li>Right click on the London boroughs layer &gt; Export &gt; Save Feature As</li>
@@ -912,10 +911,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
-<div id="r-1" class="section level3" number="1.6.5">
-<h3><span class="header-section-number">1.6.5</span> R</h3>
-<div id="introduction" class="section level4" number="1.6.5.1">
-<h4><span class="header-section-number">1.6.5.1</span> Introduction</h4>
+<div id="r-1" class="section level3 hasAnchor" number="1.6.5">
+<h3><span class="header-section-number">1.6.5</span> R<a href="geographic-information.html#r-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="introduction" class="section level4 hasAnchor" number="1.6.5.1">
+<h4><span class="header-section-number">1.6.5.1</span> Introduction<a href="geographic-information.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>R is both a programming language and software environment, originally designed for statistical computing and graphics. R’s great strength is that it is open-source, can be used on any computer operating system and free for anyone to use and contribute to. Because of this, it is rapidly becoming the statistical language of choice for many academics and has a huge user community with people constantly contributing new packages to carry out all manner of statistical, graphical and importantly for us, geographical tasks.</p>
 <p>The purpose of this practical is just to demonstrate data loading and manipulation in different software. The next practical will provide much more detail on R, so don’t worry about that.</p>
 <p>In RStudio go:</p>
@@ -950,8 +949,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="geographic-information.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rgdal)</span></code></pre></div>
 <p>If you still have issues the check out the <a href="geographic-information.html#mac-r-issues">Mac R issues</a> section</p>
 </div>
-<div id="load-data-1" class="section level4" number="1.6.5.2">
-<h4><span class="header-section-number">1.6.5.2</span> Load data</h4>
+<div id="load-data-1" class="section level4 hasAnchor" number="1.6.5.2">
+<h4><span class="header-section-number">1.6.5.2</span> Load data<a href="geographic-information.html#load-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Load the <code>sf</code> package so we can read our shapefile in — remember to change to filepath to your shapefile.</p>
 <p><img src="allisonhorst_images/sf.png" width="450pt" style="display: block; margin: auto;" /></p>
 <p>For this first practical we’ll just leave the data where it is, next week we’ll show you how to use projects to make calling data much easier.</p>
@@ -961,12 +960,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="geographic-information.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb6-2"><a href="geographic-information.html#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># change this to your file path!!!</span></span>
 <span id="cb6-3"><a href="geographic-information.html#cb6-3" aria-hidden="true" tabindex="-1"></a>shape <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">&quot;C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/statistical-gis-boundaries-london/ESRI/London_Borough_Excluding_MHW.shp&quot;</span>)</span></code></pre></div>
-<pre><code>## Reading layer `London_Borough_Excluding_MHW&#39; from data source `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\2020_2021\CASA0005repo\Prac1_data\statistical-gis-boundaries-london\ESRI\London_Borough_Excluding_MHW.shp&#39; using driver `ESRI Shapefile&#39;
+<pre><code>## Reading layer `London_Borough_Excluding_MHW&#39; from data source 
+##   `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\2020_2021\CASA0005repo\prac1_data\statistical-gis-boundaries-london\ESRI\London_Borough_Excluding_MHW.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 33 features and 7 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: 503568.2 ymin: 155850.8 xmax: 561957.5 ymax: 200933.9
-## projected CRS:  OSGB 1936 / British National Grid</code></pre>
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 503568.2 ymin: 155850.8 xmax: 561957.5 ymax: 200933.9
+## Projected CRS: OSGB 1936 / British National Grid</code></pre>
 <blockquote>
 <p><strong>Note</strong> If you are working on the UCL RStudio Server and have a shapefile (along with all the other relevant files required) you will just need to use…</p>
 </blockquote>
@@ -974,28 +975,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>As RStudio cloud knows you have setup a project and to look for files within it…we cover this very soon for RStudio desktop.</p>
 <p>To get a summary of the data held within the shapefile data (attribute table) enter the following:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="geographic-information.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(shape)</span></code></pre></div>
-<pre><code>##                    NAME         GSS_CODE     HECTARES         NONLD_AREA    
-##  Barking and Dagenham: 1   E09000001: 1   Min.   :  314.9   Min.   :  0.00  
-##  Barnet              : 1   E09000002: 1   1st Qu.: 2724.9   1st Qu.:  0.00  
-##  Bexley              : 1   E09000003: 1   Median : 3857.8   Median :  2.30  
-##  Brent               : 1   E09000004: 1   Mean   : 4832.4   Mean   : 64.22  
-##  Bromley             : 1   E09000005: 1   3rd Qu.: 5658.5   3rd Qu.: 95.60  
-##  Camden              : 1   E09000006: 1   Max.   :15013.5   Max.   :370.62  
-##  (Other)             :27   (Other)  :27                                     
-##  ONS_INNER SUB_2009  SUB_2006           geometry 
-##  F:19      NA&#39;s:33   NA&#39;s:33   MULTIPOLYGON :33  
-##  T:14                          epsg:NA      : 0  
-##                                +proj=tmer...: 0  
-##                                                  
-##                                                  
-##                                                  
+<pre><code>##      NAME             GSS_CODE            HECTARES         NONLD_AREA    
+##  Length:33          Length:33          Min.   :  314.9   Min.   :  0.00  
+##  Class :character   Class :character   1st Qu.: 2724.9   1st Qu.:  0.00  
+##  Mode  :character   Mode  :character   Median : 3857.8   Median :  2.30  
+##                                        Mean   : 4832.4   Mean   : 64.22  
+##                                        3rd Qu.: 5658.5   3rd Qu.: 95.60  
+##                                        Max.   :15013.5   Max.   :370.62  
+##   ONS_INNER           SUB_2009           SUB_2006                  geometry 
+##  Length:33          Length:33          Length:33          MULTIPOLYGON :33  
+##  Class :character   Class :character   Class :character   epsg:NA      : 0  
+##  Mode  :character   Mode  :character   Mode  :character   +proj=tmer...: 0  
+##                                                                             
+##                                                                             
 ## </code></pre>
 <p>To have a quick look what the shapefile looks like enter the following:</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="geographic-information.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(shape)</span></code></pre></div>
 <p><img src="CASA0005_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
 <p>That plots everything in the shapefile (all the attitbues) if you just wanted the geometry (outline of the shape) you could use…</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="geographic-information.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code></pre></div>
-<pre><code>## Linking to GEOS 3.9.0, GDAL 3.2.1, PROJ 7.2.1</code></pre>
+<pre><code>## Linking to GEOS 3.9.1, GDAL 3.3.2, PROJ 7.2.1; sf_use_s2() is TRUE</code></pre>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="geographic-information.html#cb14-1" aria-hidden="true" tabindex="-1"></a>shape <span class="sc">%&gt;%</span> </span>
 <span id="cb14-2"><a href="geographic-information.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_geometry</span>() <span class="sc">%&gt;%</span></span>
 <span id="cb14-3"><a href="geographic-information.html#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>()</span></code></pre></div>
@@ -1005,25 +1004,21 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="geographic-information.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb15-2"><a href="geographic-information.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#this needs to be your file path again</span></span>
 <span id="cb15-3"><a href="geographic-information.html#cb15-3" aria-hidden="true" tabindex="-1"></a>mycsv <span class="ot">&lt;-</span>  <span class="fu">read_csv</span>(<span class="st">&quot;C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/fly_tipping_borough_edit.csv&quot;</span>)  </span></code></pre></div>
-<pre><code>## Parsed with column specification:
-## cols(
-##   `Row Labels` = col_character(),
-##   `2011_12` = col_double(),
-##   `2012_13` = col_double(),
-##   `2013_14` = col_double(),
-##   `2014_15` = col_double(),
-##   `2015_16` = col_double(),
-##   `2016_17` = col_double(),
-##   `2017_18` = col_double(),
-##   Grand_Total = col_double()
-## )</code></pre>
+<pre><code>## Rows: 34 Columns: 9
+## ── Column specification ────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## chr (1): Row Labels
+## dbl (8): 2011_12, 2012_13, 2013_14, 2014_15, 2015_16, 2016_17, 2017_18, Gran...
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 <p>When you load <code>tidyverse</code> you might get a list of conflicts, this basically means that several packages have functions named the same thing. For example there is a function named <code>filter()</code> in the packages <code>dplyr</code> and <code>stats</code>. If you wanted to use the <code>dplyr</code> version you would use <code>dplyr::filter()</code> or for the <code>stats</code> version it would be <code>stats::filter()</code>…</p>
 <div class="infobox warning">
 <p><strong>Note</strong> Your <code>.csv</code> might have a extra header present (a row before Row Labels). You can either: (a) stop and go and delete this in the <code>.csv</code> now and reload it or (b) change the code to… <code>mycsv &lt;- read_csv("Prac1_data/fly_tipping_borough_edit.csv",      skip = 1)</code></p>
 </div>
 <p>To view the data just input:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="geographic-information.html#cb17-1" aria-hidden="true" tabindex="-1"></a>mycsv </span></code></pre></div>
-<pre><code>## # A tibble: 34 x 9
+<pre><code>## # A tibble: 34 × 9
 ##    `Row Labels` `2011_12` `2012_13` `2013_14` `2014_15` `2015_16` `2016_17`
 ##    &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
 ##  1 E09000001          563      1492       433       347       587      1944
@@ -1036,11 +1031,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ##  8 E09000008           31       108       460       712      1707       637
 ##  9 E09000009         6727      5679      6543      5521      6067     12688
 ## 10 E09000010         7262      3595      3269      4937      5292     10894
-## # ... with 24 more rows, and 2 more variables: `2017_18` &lt;dbl&gt;,
-## #   Grand_Total &lt;dbl&gt;</code></pre>
+## # … with 24 more rows, and 2 more variables: `2017_18` &lt;dbl&gt;, Grand_Total &lt;dbl&gt;</code></pre>
 </div>
-<div id="join-data-1" class="section level4" number="1.6.5.3">
-<h4><span class="header-section-number">1.6.5.3</span> Join data</h4>
+<div id="join-data-1" class="section level4 hasAnchor" number="1.6.5.3">
+<h4><span class="header-section-number">1.6.5.3</span> Join data<a href="geographic-information.html#join-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>In R we’ve given our London boroughs shapefile the name <code>shape</code> and our flytipping <code>.csv</code> the name <code>mycsv</code>. If you look in the Environment quadrant you should see them both listed.</p>
 <p>Join the <code>.csv</code> to the shapefile. Here, replace Row Labels with whatever your GSS_CODE is called in the <code>.csv</code>:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="geographic-information.html#cb19-1" aria-hidden="true" tabindex="-1"></a>shape <span class="ot">&lt;-</span> shape<span class="sc">%&gt;%</span></span>
@@ -1053,10 +1047,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="geographic-information.html#cb20-1" aria-hidden="true" tabindex="-1"></a>shape<span class="sc">%&gt;%</span></span>
 <span id="cb20-2"><a href="geographic-information.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>(., <span class="at">n=</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## Simple feature collection with 10 features and 15 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: 509702.4 ymin: 155850.8 xmax: 554089.2 ymax: 200933.9
-## projected CRS:  OSGB 1936 / British National Grid
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 509702.4 ymin: 155850.8 xmax: 554089.2 ymax: 200933.9
+## Projected CRS: OSGB 1936 / British National Grid
 ##     GSS_CODE                 NAME  HECTARES NONLD_AREA ONS_INNER SUB_2009
 ## 1  E09000001       City of London   314.942     24.546         T     &lt;NA&gt;
 ## 2  E09000002 Barking and Dagenham  3779.934    169.150         F     &lt;NA&gt;
@@ -1101,15 +1095,16 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="CASA0005_files/figure-html/unnamed-chunk-46-1.png" width="672" /></p>
 </div>
 </div>
-<div id="export-data-1" class="section level3" number="1.6.6">
-<h3><span class="header-section-number">1.6.6</span> Export data</h3>
+<div id="export-data-1" class="section level3 hasAnchor" number="1.6.6">
+<h3><span class="header-section-number">1.6.6</span> Export data<a href="geographic-information.html#export-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Finally write shape to a new GeoPackage (<code>.gpkg</code>) giving it the layer name of your choice:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="geographic-information.html#cb25-1" aria-hidden="true" tabindex="-1"></a>shape <span class="sc">%&gt;%</span></span>
 <span id="cb25-2"><a href="geographic-information.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">st_write</span>(.,<span class="st">&quot;C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/Rwk1.gpkg&quot;</span>,</span>
 <span id="cb25-3"><a href="geographic-information.html#cb25-3" aria-hidden="true" tabindex="-1"></a>           <span class="st">&quot;london_boroughs_fly_tipping&quot;</span>,</span>
 <span id="cb25-4"><a href="geographic-information.html#cb25-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">delete_layer=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <pre><code>## Deleting layer `london_boroughs_fly_tipping&#39; using driver `GPKG&#39;
-## Writing layer `london_boroughs_fly_tipping&#39; to data source `C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/Rwk1.gpkg&#39; using driver `GPKG&#39;
+## Writing layer `london_boroughs_fly_tipping&#39; to data source 
+##   `C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/Prac1_data/Rwk1.gpkg&#39; using driver `GPKG&#39;
 ## Writing 33 features with 15 fields and geometry type Multi Polygon.</code></pre>
 <p>So here, we are saying the shape is the object we want to save, then to the GeoPackage file path, with the layer name of <code>london_boroughs_fly_tipping</code>. I’ve set <code>delete_layer</code> to true so I could overwrite mine when I developed this practical. Changing it to false would generate an error message if you ever tried to re-run the code.</p>
 <p>Let’s also add the <code>.csv</code> as we did in QGIS. This is a bit more complicated as we have to use the SQLite database package. Firstly, connect to the <code>.gpkg</code> we just made:</p>
@@ -1146,8 +1141,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb30-7"><a href="geographic-information.html#cb30-7" aria-hidden="true" tabindex="-1"></a>con <span class="sc">%&gt;%</span> </span>
 <span id="cb30-8"><a href="geographic-information.html#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">dbDisconnect</span>()</span></code></pre></div>
 <p>Here <code>overwrite</code> let’s you well..overwrite the exisiting file…if this wasn’t specified as true you would get an error saying the file already existed if you tried to run this code again.</p>
-<div id="making-a-script" class="section level4" number="1.6.6.1">
-<h4><span class="header-section-number">1.6.6.1</span> Making a script</h4>
+<div id="making-a-script" class="section level4 hasAnchor" number="1.6.6.1">
+<h4><span class="header-section-number">1.6.6.1</span> Making a script<a href="geographic-information.html#making-a-script" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>To convert this bit of analysis into a script that we could save and run again in future, I would write the following in the script quadrant:</p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="geographic-information.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb31-2"><a href="geographic-information.html#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tmap) </span>
@@ -1194,68 +1189,68 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="geographic-information.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rgdal)</span></code></pre></div>
 </div>
 </div>
-<div id="what-will-i-use-1" class="section level3" number="1.6.7">
-<h3><span class="header-section-number">1.6.7</span> What will I use</h3>
+<div id="what-will-i-use-1" class="section level3 hasAnchor" number="1.6.7">
+<h3><span class="header-section-number">1.6.7</span> What will I use<a href="geographic-information.html#what-will-i-use-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Well… it depends. If you wanted to quickly open a dataset to explore its contents then I’d use QGIS. However, if you had 100 raster images that you wanted to clip to your study area, I’d automate it in R. There are also specific packages developed for each type of software that might dictate what you use, for example I recently made use of the Urban Multi-scale Environmental Predictor (UMEP) plugin in QGIS. That said, as I needed to match different hourly meteorological variables over a three year period I automated the first part of the analysis in R and loaded a <code>.csv</code> into QGIS. Recent advancments have also closed the gap somewhat between Graphic User Interface (GUI) GIS software (such as QGIS) and programming languages (such as R) with ‘bridges’ that allow you to control GUI software through code. To learn more about these bridges read <a href="https://geocompr.robinlovelace.net/gis.html#introduction-6">Lovelace et al. (2019) chapter 9</a>.</p>
 </div>
 </div>
-<div id="data-sources-and-task" class="section level2" number="1.7">
-<h2><span class="header-section-number">1.7</span> Data sources and task</h2>
+<div id="data-sources-and-task" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Data sources and task<a href="geographic-information.html#data-sources-and-task" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Below I’ve listed a few good data sources. Explore these and any others you can find and get an interesting dataset (e.g. in this practical our flytipping <code>.csv</code>) that you could join to some spatial data (e.g. in this practical the London boroughs <code>.shp</code>). This could be for any location in the world.</p>
-<div id="uk-data-service" class="section level3" number="1.7.1">
-<h3><span class="header-section-number">1.7.1</span> UK Data Service</h3>
+<div id="uk-data-service" class="section level3 hasAnchor" number="1.7.1">
+<h3><span class="header-section-number">1.7.1</span> UK Data Service<a href="geographic-information.html#uk-data-service" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The UK Data Service geography service (<a href="https://census.edina.ac.uk/" class="uri">https://census.edina.ac.uk/</a>) has a library of hundreds of current and former boundary datasets for which attribute data are produced in the UK.</p>
 </div>
-<div id="ons" class="section level3" number="1.7.2">
-<h3><span class="header-section-number">1.7.2</span> ONS</h3>
+<div id="ons" class="section level3 hasAnchor" number="1.7.2">
+<h3><span class="header-section-number">1.7.2</span> ONS<a href="geographic-information.html#ons" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Office for National Statistics (ONS) are the national statistical agency for England and Wales and have recently started to provide access to boundary data for the statistics they produce for various geographic areas.</p>
 <p>Many of the boundaries on the <a href="http://geoportal.statistics.gov.uk/">ONS Geoportal</a> are also available from the Edina Census Geography website in a more flexible fashion, however the ONS website provides very quick access to bulk-downloads — something which can be very useful when reading data directly from the web using computer software. From the ONS website you can also extract the URL at which the data is stored to use directly within your future code…</p>
 </div>
-<div id="nomis" class="section level3" number="1.7.3">
-<h3><span class="header-section-number">1.7.3</span> nomis</h3>
+<div id="nomis" class="section level3 hasAnchor" number="1.7.3">
+<h3><span class="header-section-number">1.7.3</span> nomis<a href="geographic-information.html#nomis" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Nomis is provided by the ONS giving free access to UK labour market statistics. You can also <a href="https://www.nomisweb.co.uk/census/2011/bulk/r2_2">bulk download census data</a> from the site too!</p>
 </div>
-<div id="os" class="section level3" number="1.7.4">
-<h3><span class="header-section-number">1.7.4</span> OS</h3>
+<div id="os" class="section level3 hasAnchor" number="1.7.4">
+<h3><span class="header-section-number">1.7.4</span> OS<a href="geographic-information.html#os" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Ordnance Survey (OS) are the national mapping agency for the UK. A few years ago, they opened up a number of their data products for public use including greenspace, OS Open Map and OS Terrain.</p>
 <p>For the full range see: <a href="https://www.ordnancesurvey.co.uk/business-and-government/products/finder.html?Licensed%20for=OpenData%20(Free)&amp;withdrawn=on" class="uri">https://www.ordnancesurvey.co.uk/business-and-government/products/finder.html?Licensed%20for=OpenData%20(Free)&amp;withdrawn=on</a></p>
 </div>
-<div id="edina-digimap" class="section level3" number="1.7.5">
-<h3><span class="header-section-number">1.7.5</span> Edina Digimap</h3>
+<div id="edina-digimap" class="section level3 hasAnchor" number="1.7.5">
+<h3><span class="header-section-number">1.7.5</span> Edina Digimap<a href="geographic-information.html#edina-digimap" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Before the Ordnance Survey opened up much of its data for public use, academics and students in the UK could access OS data using the Edina Digimap Service —- this service is still available today and provides access to a number of products in addition to those available from OS Open Data.</p>
 <p>Perhaps the most exciting of the additional OS data products available from Digimap is OS MasterMap. MasterMap is a framework for all OS data and contains layers of data that include details of real world objects such as buildings, roads, paths, rivers, physical structures and land parcels, as well as the complete UK transport network. Whilst we still are required to go through Edina OS have recently announced plans to make this dataset free in the near future under the new Geospatial Commission.</p>
 <p><img src="prac1_images/mastermap.png" width="500pt" style="display: block; margin: auto;" /></p>
 </div>
-<div id="osm" class="section level3" number="1.7.6">
-<h3><span class="header-section-number">1.7.6</span> OSM</h3>
+<div id="osm" class="section level3 hasAnchor" number="1.7.6">
+<h3><span class="header-section-number">1.7.6</span> OSM<a href="geographic-information.html#osm" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Open Street Map (OSM) is a fantastic resource —- as the name suggests, all data contained in Open Street Map are open and free for anyone to use. Much like Wikipedia, anyone can contribute content to OSM and this brings with it its own benefits (frequent updates, very large user-base) and problems (data quality and patch coverage). OSM is a very good example of Volunteered Geographic Information (VGI).</p>
 <p>It’s possible to download OSM data straight from the website, although the interface can be a little unreliable (it works better for small areas). There are, however, a number of websites that allow OSM data to be downloaded more easily and are directly linked to from the ‘Export’ option in OSM. Geofabrik (<a href="https://www.geofabrik.de/data/download.html" class="uri">https://www.geofabrik.de/data/download.html</a>) allows you to download frequently updated Shapefiles for various global subdivisions.</p>
 </div>
-<div id="defra" class="section level3" number="1.7.7">
-<h3><span class="header-section-number">1.7.7</span> DEFRA</h3>
+<div id="defra" class="section level3 hasAnchor" number="1.7.7">
+<h3><span class="header-section-number">1.7.7</span> DEFRA<a href="geographic-information.html#defra" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Department for Environment and Rural Affairs (DEFRA) have recently created the Data Services Platform to openly distribute environmental data. See: <a href="https://environment.data.gov.uk/" class="uri">https://environment.data.gov.uk/</a></p>
 </div>
-<div id="data-lists" class="section level3" number="1.7.8">
-<h3><span class="header-section-number">1.7.8</span> Data lists</h3>
+<div id="data-lists" class="section level3 hasAnchor" number="1.7.8">
+<h3><span class="header-section-number">1.7.8</span> Data lists<a href="geographic-information.html#data-lists" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Another good place to start searching for data are data lists. They simply provide a comprehensive overview of all available data conveniently categorised by discipline and country.</p>
 <p>I normally use this one: <a href="https://freegisdata.rtwilson.com/" class="uri">https://freegisdata.rtwilson.com/</a></p>
 </div>
 </div>
-<div id="summary" class="section level2" number="1.8">
-<h2><span class="header-section-number">1.8</span> Summary</h2>
+<div id="summary" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Summary<a href="geographic-information.html#summary" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Within this practical we have explored the different types, formats and software used to store, analyse and manipulate spatial data. In reflecting upon this practical you should consider the (dis)advantages of each, where and when they might be appropriate and the overall practicality. Next week we will delve further into R and RStudio.</p>
 </div>
-<div id="feedback" class="section level2" number="1.9">
-<h2><span class="header-section-number">1.9</span> Feedback</h2>
+<div id="feedback" class="section level2 hasAnchor" number="1.9">
+<h2><span class="header-section-number">1.9</span> Feedback<a href="geographic-information.html#feedback" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Was anything that we explained unclear this week or was something really clear…let us know using the <a href="https://forms.gle/w2GUDYc7tSavGy7r6">feedback form</a>. It’s anonymous and we’ll use the responses to clear any issues up in the future / adapt the material.</p>
 </div>
-<div id="mac-r-issues" class="section level2" number="1.10">
-<h2><span class="header-section-number">1.10</span> Mac R issues</h2>
+<div id="mac-r-issues" class="section level2 hasAnchor" number="1.10">
+<h2><span class="header-section-number">1.10</span> Mac R issues<a href="geographic-information.html#mac-r-issues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you have a Mac and run into issues using R, try this…</p>
 <p>It seems that a lot of the packages are dependent on rgdal, which might not properly install…</p>
 <p><strong>Order of operations</strong></p>
 <ol style="list-style-type: decimal">
-<li><p>Install java JDK (to respond to error Unable to find any JVMs matching version “(null),” which occurred when we tried to load <code>OpenStreetMap</code> package in RStudio)</p></li>
+<li><p>Install java JDK (to respond to error Unable to find any JVMs matching version “(null)”, which occurred when we tried to load <code>OpenStreetMap</code> package in RStudio)</p></li>
 <li><p>Download and install the appropriate <code>.dmg</code> from <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java SE Development Kit 11.0.1</a></p></li>
 <li><p>Run sudo R CMD javareconf in Terminal as described <a href="http://conjugateprior.org/2014/12/r-java8-osx/">in this tutorial</a>(though don’t follow this tutorial exactly, just up to that terminal command).</p></li>
 <li><p>(Maybe) restart your computer (not really sure when this is necessary).</p></li>
@@ -1289,7 +1284,6 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1329,6 +1323,10 @@ gitbook.start({
 "text": null
 },
 "download": ["https://github.com/andrewmaclachlan/CASA0005repo/raw/master/01-prac1.Rmd"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

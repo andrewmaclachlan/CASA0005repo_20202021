@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Introduction to R | CASA0005 Geographic Information Systems and Science</title>
   <meta name="description" content="The CASA0005 Geographic Information Systems and Science practical book" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Introduction to R | CASA0005 Geographic Information Systems and Science" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://andrewmaclachlan.github.io/CASA0005repo/" />
   <meta property="og:image" content="https://andrewmaclachlan.github.io/CASA0005repo//general_images/casa_logo.png" />
   <meta property="og:description" content="The CASA0005 Geographic Information Systems and Science practical book" />
   <meta name="github-repo" content="andrewmaclachlan/CASA0005repo" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andy MacLachlan and Adam Dennett" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2022-06-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="geographic-information.html"/>
 <link rel="next" href="rasters-descriptive-statistics-and-interpolation.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,36 +49,36 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.23/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
 <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
 <script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151934476-1"></script>
@@ -617,10 +616,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction-to-r" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Introduction to R</h1>
-<div id="learning-outcomes-1" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Learning outcomes</h2>
+<div id="introduction-to-r" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introduction to R<a href="introduction-to-r.html#introduction-to-r" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="learning-outcomes-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Learning outcomes<a href="introduction-to-r.html#learning-outcomes-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By the end of this practical you should be able to:</p>
 <ol style="list-style-type: decimal">
 <li>Execute basic processing in R</li>
@@ -630,8 +629,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>Evaluate the benefits of different data manipulation and mapping techniques</li>
 </ol>
 </div>
-<div id="homework-1" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Homework</h2>
+<div id="homework-1" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Homework<a href="introduction-to-r.html#homework-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Outside of our schedulded sessions you should be doing around 12 hours of extra study per week. Feel free to follow your own GIS interests, but good places to start include the following:</p>
 <div class="infobox assignment">
 <p><strong>Assignment</strong></p>
@@ -652,14 +651,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Remember this is just a starting point, explore the <a href="https://rl.talis.com/3/ucl/lists/139FBAF8-DACD-60FB-8BDC-E9C9E09BA885.html?lang=en-GB&amp;login=1">reading list</a>, practical and lecture for more ideas.</p>
 </div>
 </div>
-<div id="recommended-listening-1" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Recommended listening 🎧</h2>
+<div id="recommended-listening-1" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Recommended listening 🎧<a href="#recommended-listening-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Some of these practicals are long, take regular breaks and have a listen to some of our fav tunes each week.</p>
 <p><a href="https://open.spotify.com/album/7jGNAMzrW5HMXdxl9XyBMG">Andy</a>. Dermot Kennedy, might give you the chills with his pure voice. I saw him live last year at All Points East in London. Orginally was well known from the Spotify Discover Weekly where he used to self publish songs.</p>
 <p><a href="https://open.spotify.com/album/5yAXUpsKaby5IcXgzrNFAw">Adam</a>. Change of genre this week, but this will still melt your brains! I first saw this band in Cambridge in about 2004 when we were both still young! 16 years later, they’re now a massive platinum-selling Rock juggernaut with their latest singles bothering the playlists of the world’s most popular radio stations and their live-shows conquering the biggest festivals. Mon the Biff. It is of course Biffy Clyro! Here’s their latest album - A Celebration of Endings -</p>
 </div>
-<div id="introduction-1" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Introduction</h2>
+<div id="introduction-1" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Introduction<a href="introduction-to-r.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This practical is <strong>LONG</strong> but it will take you from not knowing much about R to making freaking cool interactive maps in one practical. As you can imagine, this will be a steep learning curve.</p>
 <p>I will give you all the code you need, it’s your job to read through the text very carefully and try to understand what bits of code are doing as you go.</p>
 <p>There will be bits of code you don’t fully understand. Don’t worry, the key is to revisit later and try to work out what is going on then. Learning R is a long and iterative process and this is just the start…</p>
@@ -673,26 +672,26 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p><a href="http://www.cookbook-r.com/" class="uri">http://www.cookbook-r.com/</a></p></li>
 </ul>
 <p>If you want to really be up to date with the state of the art in R, then <a href="https://bookdown.org/">bookdown</a> is a fantastic resource. It features <strong>free</strong> books by some of the pre-eminent names in the R scene — I would urge you to go and take a look.</p>
-<div id="online-forums-are-your-friend" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Online forums are your friend!!</h3>
+<div id="online-forums-are-your-friend" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Online forums are your friend!!<a href="introduction-to-r.html#online-forums-are-your-friend" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>With almost every problem you encounter with R, someone else will have had the same problem before you and posted it on a forum –– someone will then post a solution below.</p>
 <p>My usual route is to Google the problem and I’ll then be directed to a post, usually on Stack Overflow, Stack Exchange or Cross Validated. When doing so try to think about the minimal working (or not working) example (MWE), by this i mean remove anything very specific to your problem. I’ve rarely not found a solution to a problem this way.</p>
 </div>
-<div id="health-warning" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Health warning</h3>
+<div id="health-warning" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Health warning<a href="introduction-to-r.html#health-warning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Beware of posting questions on these forums yourself – contributors to these forums (especially the R ones!), whilst almost always extremely knowledgeable about R, have a bit of a reputation for being insert familiar pejorative term for less-than-polite-human-being here! As you might expect, people who have enough time to become total experts in R, have little time to work on their social skills!! Fortunately though, some other poor chump has usually taken that hit for you and you can still find a useful answer to your problem.</p>
 <p>If you are specifically more interested in the spatial side of R, then Alex Singleton and Chris Brunsdon at the Universities of Liverpool and Maynooth also have a number of very useful R Spatial Tutorials – <a href="http://rpubs.com/alexsingleton/" class="uri">http://rpubs.com/alexsingleton/</a> &amp; <a href="http://rpubs.com/chrisbrunsdon/" class="uri">http://rpubs.com/chrisbrunsdon/</a></p>
 <p>Robin Lovelace in Leeds is also frequently at the bleeding edge of developments in R spatial stuff, so keep an eye on his <a href="http://robinlovelace.net/">website</a>. Robin has also made a book on GeoComputation in R, which you should definitely read! — <a href="https://geocompr.robinlovelace.net/" class="uri">https://geocompr.robinlovelace.net/</a></p>
 <p>These websites are also very very good: <a href="https://pakillo.github.io/R-GIS-tutorial/" class="uri">https://pakillo.github.io/R-GIS-tutorial/</a> and <a href="http://www.maths.lancs.ac.uk/~rowlings/Teaching/UseR2012/cheatsheet.html" class="uri">http://www.maths.lancs.ac.uk/~rowlings/Teaching/UseR2012/cheatsheet.html</a></p>
 </div>
-<div id="r-and-rstudio" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> R and RStudio</h3>
+<div id="r-and-rstudio" class="section level3 hasAnchor" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> R and RStudio<a href="introduction-to-r.html#r-and-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When you download and install R, you get the R Graphical User Interface (GUI) as standard (below). This is fine and some purists prefer using the clean, unfussy command-line original, but it has some limitations such as no graphical way to view data tables or keep track of what is in your working directory (there are a number of others too).</p>
 <p><img src="prac2_images/R.png" width="500px" style="display: block; margin: auto;" /></p>
 <p>Fortunately there are a number of software environments that have been developed for R to make it a little more user-friendly; the best of these by a long way is RStudio. RStudio can be downloaded for free from <a href="https://www.rstudio.com/" class="uri">https://www.rstudio.com/</a>. We covered the RStudio layout last week.</p>
 </div>
-<div id="getting-started-1" class="section level3" number="2.4.4">
-<h3><span class="header-section-number">2.4.4</span> Getting started</h3>
+<div id="getting-started-1" class="section level3 hasAnchor" number="2.4.4">
+<h3><span class="header-section-number">2.4.4</span> Getting started<a href="introduction-to-r.html#getting-started-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If you are some kind of masochist, you are welcome to use the bundled R GUI for all of your work. If pain is not your thing, then for this practical (and future practicals) I will assume that you are using RStudio.</p>
 <ol style="list-style-type: decimal">
 <li>From the start menu on your computer, find and run RStudio</li>
@@ -714,8 +713,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>I’d strongly recommend you think about how you will store data within your project. Is it sensible to just dump all your data into the project folder or perahps create a new folder (either in R) or how you would normally do so in Windows / OS X and keep your raw data in that folder…like i have done…Here you can see that i’m in my project folder (red box on the right) and i’ve made new folders for all my data (each practical here) and images that are shown throuhgout….nice and organised!</p>
 <p><img src="prac2_images/file_storage.png" width="500px" style="display: block; margin: auto;" /></p>
 </div>
-<div id="basics" class="section level3" number="2.4.5">
-<h3><span class="header-section-number">2.4.5</span> Basics</h3>
+<div id="basics" class="section level3 hasAnchor" number="2.4.5">
+<h3><span class="header-section-number">2.4.5</span> Basics<a href="introduction-to-r.html#basics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>R has a very steep learning curve, but hopefully it won’t take long to get your head around the basics. For example, at its most simple R can be used as a calculator. In the console window (bottom left), just type the following and press enter:</li>
 </ol>
@@ -730,8 +729,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>The R Script should open up on the top-left of your GUI. <strong>From now on type everything in this R script file and save it</strong></p></li>
 </ol>
 </div>
-<div id="scripts-and-some-basic-commands" class="section level3" number="2.4.6">
-<h3><span class="header-section-number">2.4.6</span> Scripts and some basic commands</h3>
+<div id="scripts-and-some-basic-commands" class="section level3 hasAnchor" number="2.4.6">
+<h3><span class="header-section-number">2.4.6</span> Scripts and some basic commands<a href="introduction-to-r.html#scripts-and-some-basic-commands" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Usually one of the first things to do when starting a new R Script is to check that you are in the correct working directory. This is important especially if you are working on multiple projects in different locations. To do this type the following into your new empty R Script:</li>
 </ol>
@@ -757,20 +756,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>You have just demonstrated one of the powerful aspects of R, which is that it is an <strong>object oriented</strong> programming language. A, B and C are all objects that have been assigned a value with the &lt;- symbol (you can also use the = sign, but it operates slightly differently to &lt;- in R, plus the arrow assignment has become standard over the years. Use <strong>alt -</strong> to type it automatically). This principle underlies the whole language and enables users to create ever more complex objects as they progress through their analysis. If you type:</p></li>
 </ol>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="introduction-to-r.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code></pre></div>
-<pre><code>##  [1] &quot;A&quot;                   &quot;all_pkgs&quot;            &quot;B&quot;                  
-##  [4] &quot;b8backin&quot;            &quot;b8list2&quot;             &quot;C&quot;                  
-##  [7] &quot;con&quot;                 &quot;e&quot;                   &quot;listlandsat&quot;        
-## [10] &quot;lsatcrop&quot;            &quot;lsatmask&quot;            &quot;manc&quot;               
-## [13] &quot;manc_false&quot;          &quot;manc_files&quot;          &quot;manc_rgb&quot;           
-## [16] &quot;manchester_boundary&quot; &quot;MTL&quot;                 &quot;mycsv&quot;              
-## [19] &quot;outputfilenames&quot;     &quot;session&quot;             &quot;shape&quot;              
-## [22] &quot;stacklandsat&quot;</code></pre>
+<pre><code>## [1] &quot;A&quot;        &quot;all_pkgs&quot; &quot;B&quot;        &quot;C&quot;        &quot;con&quot;      &quot;mycsv&quot;    &quot;session&quot; 
+## [8] &quot;shape&quot;</code></pre>
 <p>R will produce a list of objects that are currently active.</p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="introduction-to-r.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(A)</span></code></pre></div>
 <p>will remove the object A from the workspace (do <code>ls()</code> again to check this or look in your workspace window).</p>
 </div>
-<div id="functions" class="section level3" number="2.4.7">
-<h3><span class="header-section-number">2.4.7</span> Functions</h3>
+<div id="functions" class="section level3 hasAnchor" number="2.4.7">
+<h3><span class="header-section-number">2.4.7</span> Functions<a href="introduction-to-r.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Both <code>rm()</code> and <code>ls()</code> are known as functions. Functions are the other fundamental aspect to the R language. Functions can be thought of as single or multiple calculations that you apply to objects. They generally take the form of…(don’t run these)</li>
 </ol>
@@ -782,8 +775,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>You can write your own functions to carry out tasks (and we’ll come onto that in subsequent practical sessions), but normally you will just used one of the virtually infinite number of functions that other people have already written for us.</li>
 </ol>
 </div>
-<div id="basic-plotting" class="section level3" number="2.4.8">
-<h3><span class="header-section-number">2.4.8</span> Basic plotting</h3>
+<div id="basic-plotting" class="section level3 hasAnchor" number="2.4.8">
+<h3><span class="header-section-number">2.4.8</span> Basic plotting<a href="introduction-to-r.html#basic-plotting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>One common function is the <code>plot()</code> function for displaying data as a graphical output. Add these lines to your script and run them as before and you can see some <code>plot()</code> outputs:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="introduction-to-r.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co">#create some datasets, first a vector of 1-100 and 101-200</span></span>
 <span id="cb50-2"><a href="introduction-to-r.html#cb50-2" aria-hidden="true" tabindex="-1"></a>Data1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>)</span>
@@ -803,8 +796,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ol>
 <p><strong>Warning</strong> Heed our advice now and comment your code it will save you time in the future!</p>
 </div>
-<div id="help" class="section level3" number="2.4.9">
-<h3><span class="header-section-number">2.4.9</span> Help</h3>
+<div id="help" class="section level3 hasAnchor" number="2.4.9">
+<h3><span class="header-section-number">2.4.9</span> Help<a href="introduction-to-r.html#help" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>The previous lines of code also demonstrated a number of functions: <code>c()</code> concatenates a string of numbers together into a vector. 1:100 means produce the integers between and including 1:100, the <code>plot()</code> function plots the two data objects and includes a parameter to change the colour of the points. To understand what a function does, you can consult the R Help system. Simply type a question mark and then the function name; for example:</li>
 </ol>
@@ -814,8 +807,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li>In RStudio you will see the help file appear in the Help window in the bottom right of the GUI. Here you can also search for the help files for other functions in the search bar.</li>
 </ol>
 </div>
-<div id="data-structures" class="section level3" number="2.4.10">
-<h3><span class="header-section-number">2.4.10</span> Data structures</h3>
+<div id="data-structures" class="section level3 hasAnchor" number="2.4.10">
+<h3><span class="header-section-number">2.4.10</span> Data structures<a href="introduction-to-r.html#data-structures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Objects in R can exist as a number of different data structures. These include a <strong>matrix</strong>, an <strong>array</strong>, a <strong>vector</strong>, a <strong>data frame</strong> and a <strong>list</strong>.</li>
 </ol>
@@ -838,13 +831,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="introduction-to-r.html#cb55-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span></span>
 <span id="cb55-2"><a href="introduction-to-r.html#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tail</span>()</span></code></pre></div>
 <div class="infobox warning">
-<p>You might have noticed the syntax (code) <code>%&gt;%</code>, this is called a <strong>pipe</strong> and is an operator is part from the <code>magrittr</code> package. <code>magrittr</code> is an entirely new way of thinking about R syntax that cleraly expresses a sequence of multiple operations. It is useful to think of the pipe operator as simply meaning “then.” Do this <strong>THEN</strong> do this <strong>THEN</strong> do that.</p>
+<p>You might have noticed the syntax (code) <code>%&gt;%</code>, this is called a <strong>pipe</strong> and is an operator is part from the <code>magrittr</code> package. <code>magrittr</code> is an entirely new way of thinking about R syntax that cleraly expresses a sequence of multiple operations. It is useful to think of the pipe operator as simply meaning “then”. Do this <strong>THEN</strong> do this <strong>THEN</strong> do that.</p>
 </div>
 <p>You can also view elements of your data frame in RStudio by simply clicking on it in the top-right Environment window:</p>
 <p><img src="prac2_images/dataview.png" width="800px" style="display: block; margin: auto;" /></p>
 </div>
-<div id="elements-of-a-data-frame" class="section level3" number="2.4.11">
-<h3><span class="header-section-number">2.4.11</span> Elements of a data frame</h3>
+<div id="elements-of-a-data-frame" class="section level3 hasAnchor" number="2.4.11">
+<h3><span class="header-section-number">2.4.11</span> Elements of a data frame<a href="introduction-to-r.html#elements-of-a-data-frame" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>When programming you will frequently want to refer to different elements in a data frame or a vector/list. To select elements of a data frame, or subset it, you can refer specifically to ranges or elements of rows and columns. These are accessed using the single square bracket operator [], with the form:</li>
 </ol>
@@ -876,13 +869,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>This again is useful if you have a lot of columns and you wish to efficiently extract one of them.</p>
 </div>
 </div>
-<div id="reading-data-into-r" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> Reading data into R</h2>
+<div id="reading-data-into-r" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Reading data into R<a href="introduction-to-r.html#reading-data-into-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One of the most tedious things a spatial analyst / data scientist has to do is clean their data so it doesn’t cause problems for the software later. In the past, we would have needed to do this by hand — these days, we can use software to do much of this for us.</p>
 <p>I will now give you two options to arrive at a nice cleaned dataset. For this example we are going to use the London Datastore Catalogue.</p>
 <p>Go to the London Data store and <a href="https://data.london.gov.uk/dataset/f33fb38c-cb37-48e3-8298-84c0d3cc5a6c">get the Ward Profiles and Atlas</a> and download the excel document for ward profiles.</p>
-<div id="old-skool-cleaning" class="section level3" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Old skool cleaning</h3>
+<div id="old-skool-cleaning" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Old skool cleaning<a href="introduction-to-r.html#old-skool-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Open the <code>ward-profiles-excel-version.xls</code> file in Excel, and save as <code>LondonData.csv</code> into your RProject folder, week 2.</p></li>
 <li><p>Open your new <code>.csv</code> file in Excel. There might be some non-numeric values inside numeric columns which will cause problems in your analysis. These need to be removed before proceeding any further. To remove these, you can use the replace function in Excel. In the home tab under ‘Editing’ open up the find and replace dialogue box and enter the following into the find box:</p></li>
@@ -910,8 +903,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb64-6"><a href="introduction-to-r.html#cb64-6" aria-hidden="true" tabindex="-1"></a>                         <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">&quot;,&quot;</span>, <span class="at">encoding =</span> <span class="st">&quot;latin1&quot;</span>)</span></code></pre></div>
 <p>This would specify that the first row of the file contains header information; and the values in the file are separated with commas (not ; or : as can be the case sometimes).</p>
 </div>
-<div id="here" class="section level3" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Here</h3>
+<div id="here" class="section level3 hasAnchor" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Here<a href="introduction-to-r.html#here" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>However, this is also another more straightforward way to read in files that was devloped in 2017 to make it more intuitive to find and load files using the <code>here</code> package. You need to install and load it:</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="introduction-to-r.html#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;here&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb66-1"><a href="introduction-to-r.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code></pre></div>
@@ -925,8 +918,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>This just removes any need for ever using a <code>/</code> or <code>\\</code> in your file path. As with everything in code, there is no right way, use what suits you.</p>
 <p><img src="allisonhorst_images/here.png" width="450pt" style="display: block; margin: auto;" /></p>
 </div>
-<div id="new-skool-cleaning" class="section level3" number="2.5.3">
-<h3><span class="header-section-number">2.5.3</span> New skool cleaning</h3>
+<div id="new-skool-cleaning" class="section level3 hasAnchor" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> New skool cleaning<a href="introduction-to-r.html#new-skool-cleaning" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>To clean our data as we read it in, we are going to use a package called <code>readr</code> which also comes bundled as part of the <code>tidyverse</code> package.</p>
 <p><img src="allisonhorst_images/tidyverse_celestial.png" width="450pt" style="display: block; margin: auto;" /></p>
 <p>The <a href="https://www.tidyverse.org/"><code>tidyverse</code></a> is simply a collection of pacakges relevant for data science, containing almost everything you need to become a kick-ass data scientist.</p>
@@ -943,8 +936,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>What is <code>locale = locale(encoding = "latin1")</code>?…good question…it is basically the encoding of the data (how it is stored). There are a few different formats such as UTF-8 and latin1. In latin1 each character is 1 byte long, in UTF-8 a character can consist of more than 1 byte. To my knowledge the default in R is encoded as latin1, but <code>readr</code> (the package we are using to read in the <code>.csv</code> is UTF-8 so we have to specify it.</p>
 </div>
-<div id="examining-your-new-data" class="section level3" number="2.5.4">
-<h3><span class="header-section-number">2.5.4</span> Examining your new data</h3>
+<div id="examining-your-new-data" class="section level3 hasAnchor" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Examining your new data<a href="introduction-to-r.html#examining-your-new-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li>Your new data has been read in as a data frame / tibble (remember a tibble is just a data frame with a few extra bells and whistles). If you ever need to check what data type your new data set is, we can use the <code>class()</code> function:</li>
 </ol>
@@ -960,7 +953,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb74-5"><a href="introduction-to-r.html#cb74-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to=</span><span class="st">&quot;Variable_class&quot;</span>)</span>
 <span id="cb74-6"><a href="introduction-to-r.html#cb74-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb74-7"><a href="introduction-to-r.html#cb74-7" aria-hidden="true" tabindex="-1"></a>Datatypelist</span></code></pre></div>
-<pre><code>## # A tibble: 67 x 2
+<pre><code>## # A tibble: 67 × 2
 ##    All_variables                      Variable_class
 ##    &lt;chr&gt;                              &lt;chr&gt;         
 ##  1 Ward name                          character     
@@ -973,7 +966,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ##  8 % All Children aged 0-15 - 2015    numeric       
 ##  9 % All Working-age (16-64) - 2015   numeric       
 ## 10 % All Older people aged 65+ - 2015 numeric       
-## # ... with 57 more rows</code></pre>
+## # … with 57 more rows</code></pre>
 <p>We cover <code>pivot_longer()</code> later in this practical, but for now we’ve simply grouped all our variables into one <strong>LONG</strong> column adding another column that contains the class.</p>
 <p>You should see that all columns that should be numbers are read in as numeric. Try reading in LondonData again, but this time without excluding the ‘n/a’ values in the file, e.g.</p>
 <div class="sourceCode" id="cb76"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb76-1"><a href="introduction-to-r.html#cb76-1" aria-hidden="true" tabindex="-1"></a>LondonData <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;https://data.london.gov.uk/download/ward-profiles-and-atlas/772d2d64-e8c6-46cb-86f9-e52b4c7851bc/ward-profiles-excel-version.csv&quot;</span>, </span>
@@ -1000,11 +993,11 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 ## [3] &quot;New code&quot;                   &quot;Population - 2015&quot;         
 ## [5] &quot;Children aged 0-15 - 2015&quot;  &quot;Working-age (16-64) - 2015&quot;</code></pre>
 </div>
-<div id="data-manipulation-in-r" class="section level3" number="2.5.5">
-<h3><span class="header-section-number">2.5.5</span> Data manipulation in R</h3>
+<div id="data-manipulation-in-r" class="section level3 hasAnchor" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> Data manipulation in R<a href="introduction-to-r.html#data-manipulation-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now we have some data read into R, we need to select a small subset to work on. The first thing we will do is select just the London Boroughs to work with. If you recall, the Borough data is at the bottom of the file.</p>
-<div id="selecting-rows" class="section level4" number="2.5.5.1">
-<h4><span class="header-section-number">2.5.5.1</span> Selecting rows</h4>
+<div id="selecting-rows" class="section level4 hasAnchor" number="2.5.5.1">
+<h4><span class="header-section-number">2.5.5.1</span> Selecting rows<a href="introduction-to-r.html#selecting-rows" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>Your borough data will probably be found between rows 626 and 658. Therefore we will first create a subset by selecting these rows into a new data frame and then reducing that data frame to just four columns. There are a few ways of doing this:</li>
 </ol>
@@ -1035,8 +1028,8 @@ Here, we could filter based on a variable, for example extracting all the wards 
 <div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb88-1"><a href="introduction-to-r.html#cb88-1" aria-hidden="true" tabindex="-1"></a>LondonBoroughs<span class="ot">&lt;-</span>LondonBoroughs <span class="sc">%&gt;%</span></span>
 <span id="cb88-2"><a href="introduction-to-r.html#cb88-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span></code></pre></div>
 </div>
-<div id="selecting-columns" class="section level4" number="2.5.5.2">
-<h4><span class="header-section-number">2.5.5.2</span> Selecting columns</h4>
+<div id="selecting-columns" class="section level4 hasAnchor" number="2.5.5.2">
+<h4><span class="header-section-number">2.5.5.2</span> Selecting columns<a href="introduction-to-r.html#selecting-columns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>We can select columns if we know which index we want, starting from the first column that’s 1..</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="introduction-to-r.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co">#select columns 1,19,20 and 21</span></span>
 <span id="cb89-2"><a href="introduction-to-r.html#cb89-2" aria-hidden="true" tabindex="-1"></a>LondonBoroughs_manualcols<span class="ot">&lt;-</span>LondonBoroughs[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">19</span>,<span class="dv">20</span>,<span class="dv">21</span>)]</span></code></pre></div>
@@ -1053,8 +1046,8 @@ Here, we could filter based on a variable, for example extracting all the wards 
 <span id="cb91-3"><a href="introduction-to-r.html#cb91-3" aria-hidden="true" tabindex="-1"></a>         <span class="fu">contains</span>(<span class="st">&quot;obese - 2011/12 to 2013/14&quot;</span>),</span>
 <span id="cb91-4"><a href="introduction-to-r.html#cb91-4" aria-hidden="true" tabindex="-1"></a>         <span class="fu">contains</span>(<span class="st">&quot;Ward name&quot;</span>)) </span></code></pre></div>
 </div>
-<div id="renaming-columns" class="section level4" number="2.5.5.3">
-<h4><span class="header-section-number">2.5.5.3</span> Renaming columns</h4>
+<div id="renaming-columns" class="section level4 hasAnchor" number="2.5.5.3">
+<h4><span class="header-section-number">2.5.5.3</span> Renaming columns<a href="introduction-to-r.html#renaming-columns" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
 <li>You will notice that the column names are slightly misleading as we are now working with boroughs rather than wards. You probably will also be annoyed (like me!) that the column names are full of <code>...</code> that just make eveything hard to read. So, let’s rename the wards column to boroughs (using <code>rename()</code> like we did earlier), then using the <code>Janitor</code> package tidy everything up…</li>
 </ol>
@@ -1070,8 +1063,8 @@ Here, we could filter based on a variable, for example extracting all the wards 
 <span id="cb93-2"><a href="introduction-to-r.html#cb93-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#here the ., means all data</span></span>
 <span id="cb93-3"><a href="introduction-to-r.html#cb93-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clean_names</span>(., <span class="at">case=</span><span class="st">&quot;big_camel&quot;</span>)</span></code></pre></div>
 </div>
-<div id="more-dplyr-verbs" class="section level4" number="2.5.5.4">
-<h4><span class="header-section-number">2.5.5.4</span> More <code>dplyr</code> verbs</h4>
+<div id="more-dplyr-verbs" class="section level4 hasAnchor" number="2.5.5.4">
+<h4><span class="header-section-number">2.5.5.4</span> More <code>dplyr</code> verbs<a href="introduction-to-r.html#more-dplyr-verbs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>What about determining both:</p>
 <ul>
 <li><ol style="list-style-type: lower-alpha">
@@ -1103,7 +1096,7 @@ Here, we could filter based on a variable, for example extracting all the wards 
 <p>We can also use <code>dplyr</code> to show us the top and bottom number of rows instead of using <code>head</code> or <code>tail</code> like we did earlier.</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="introduction-to-r.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="co">#top of data</span></span>
 <span id="cb95-2"><a href="introduction-to-r.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_head</span>(Life_expectancy, <span class="at">n=</span><span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 5 x 4
+<pre><code>## # A tibble: 5 × 4
 ##   new_code  borough                averagelifeexpectancy normalisedlifeepectancy
 ##   &lt;chr&gt;     &lt;chr&gt;                                  &lt;dbl&gt;                   &lt;dbl&gt;
 ## 1 E09000001 City of London                          86.4                    1.05
@@ -1113,7 +1106,7 @@ Here, we could filter based on a variable, for example extracting all the wards 
 ## 5 E09000033 Westminster                             83.8                    1.02</code></pre>
 <div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="introduction-to-r.html#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co">#bottom of data</span></span>
 <span id="cb97-2"><a href="introduction-to-r.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="fu">slice_tail</span>(Life_expectancy,<span class="at">n=</span><span class="dv">5</span>)</span></code></pre></div>
-<pre><code>## # A tibble: 5 x 4
+<pre><code>## # A tibble: 5 × 4
 ##   new_code  borough              averagelifeexpectancy normalisedlifeepectancy
 ##   &lt;chr&gt;     &lt;chr&gt;                                &lt;dbl&gt;                   &lt;dbl&gt;
 ## 1 E09000011 Greenwich                             80.8                   0.983
@@ -1122,29 +1115,29 @@ Here, we could filter based on a variable, for example extracting all the wards 
 ## 4 E09000002 Barking and Dagenham                  80.1                   0.974
 ## 5 E09000030 Tower Hamlets                         80.0                   0.974</code></pre>
 </div>
-<div id="levelling-up-withdplyr" class="section level4" number="2.5.5.5">
-<h4><span class="header-section-number">2.5.5.5</span> Levelling up with<code>dplyr</code></h4>
+<div id="levelling-up-withdplyr" class="section level4 hasAnchor" number="2.5.5.5">
+<h4><span class="header-section-number">2.5.5.5</span> Levelling up with<code>dplyr</code><a href="introduction-to-r.html#levelling-up-withdplyr" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>So far, we’ve really just covered basic operations with <code>dplyr</code> that you might have previously done in Excel. However, <code>dplyr</code> has much more powerful functions that can make advanced data wrangling a breeze. Whilst we’ve looked at life expectancy in the London boroughs relative to each other, how does the life expectancy of the London Boroughs compare the the UK average of 81.16?</p>
-<p>To answer this question we can use the <code>case_when()</code>, whereby if the value is greater than 81.16 we can assign the Borough a string of “above UK average,” and if below a string of “below UK average”….</p>
+<p>To answer this question we can use the <code>case_when()</code>, whereby if the value is greater than 81.16 we can assign the Borough a string of “above UK average”, and if below a string of “below UK average”….</p>
 <p><img src="allisonhorst_images/dplyr_case_when.png" width="500pt" style="display: block; margin: auto;" /></p>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="introduction-to-r.html#cb99-1" aria-hidden="true" tabindex="-1"></a>Life_expectancy2 <span class="ot">&lt;-</span> Life_expectancy <span class="sc">%&gt;%</span></span>
 <span id="cb99-2"><a href="introduction-to-r.html#cb99-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">UKcompare =</span> <span class="fu">case_when</span>(averagelifeexpectancy<span class="sc">&gt;</span><span class="fl">81.16</span> <span class="sc">~</span> <span class="st">&quot;above UK average&quot;</span>,</span>
 <span id="cb99-3"><a href="introduction-to-r.html#cb99-3" aria-hidden="true" tabindex="-1"></a>                               <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">&quot;below UK average&quot;</span>))</span>
 <span id="cb99-4"><a href="introduction-to-r.html#cb99-4" aria-hidden="true" tabindex="-1"></a>Life_expectancy2</span></code></pre></div>
-<pre><code>## # A tibble: 33 x 5
-##    new_code  borough         averagelifeexpect~ normalisedlifeepec~ UKcompare   
-##    &lt;chr&gt;     &lt;chr&gt;                        &lt;dbl&gt;               &lt;dbl&gt; &lt;chr&gt;       
-##  1 E09000001 City of London                86.4                1.05 above UK av~
-##  2 E09000020 Kensington and~               84.4                1.03 above UK av~
-##  3 E09000015 Harrow                        84.2                1.02 above UK av~
-##  4 E09000027 Richmond upon ~               83.9                1.02 above UK av~
-##  5 E09000033 Westminster                   83.8                1.02 above UK av~
-##  6 E09000007 Camden                        83.6                1.02 above UK av~
-##  7 E09000003 Barnet                        83.4                1.02 above UK av~
-##  8 E09000006 Bromley                       83.1                1.01 above UK av~
-##  9 E09000021 Kingston upon ~               82.9                1.01 above UK av~
-## 10 E09000005 Brent                         82.4                1.00 above UK av~
-## # ... with 23 more rows</code></pre>
+<pre><code>## # A tibble: 33 × 5
+##    new_code  borough                averagelifeexpec… normalisedlifee… UKcompare
+##    &lt;chr&gt;     &lt;chr&gt;                              &lt;dbl&gt;            &lt;dbl&gt; &lt;chr&gt;    
+##  1 E09000001 City of London                      86.4             1.05 above UK…
+##  2 E09000020 Kensington and Chelsea              84.4             1.03 above UK…
+##  3 E09000015 Harrow                              84.2             1.02 above UK…
+##  4 E09000027 Richmond upon Thames                83.9             1.02 above UK…
+##  5 E09000033 Westminster                         83.8             1.02 above UK…
+##  6 E09000007 Camden                              83.6             1.02 above UK…
+##  7 E09000003 Barnet                              83.4             1.02 above UK…
+##  8 E09000006 Bromley                             83.1             1.01 above UK…
+##  9 E09000021 Kingston upon Thames                82.9             1.01 above UK…
+## 10 E09000005 Brent                               82.4             1.00 above UK…
+## # … with 23 more rows</code></pre>
 <p>Now whilst this is useful, it doesn’t tell is much more about the data itself, what if we wanted to know the range of life expectancies for London Boroughs that are above the national average….</p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="introduction-to-r.html#cb101-1" aria-hidden="true" tabindex="-1"></a>Life_expectancy2_group <span class="ot">&lt;-</span> Life_expectancy2 <span class="sc">%&gt;%</span></span>
 <span id="cb101-2"><a href="introduction-to-r.html#cb101-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">UKdiff =</span> averagelifeexpectancy<span class="fl">-81.16</span>) <span class="sc">%&gt;%</span></span>
@@ -1152,7 +1145,7 @@ Here, we could filter based on a variable, for example extracting all the wards 
 <span id="cb101-4"><a href="introduction-to-r.html#cb101-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">range=</span><span class="fu">max</span>(UKdiff)<span class="sc">-</span><span class="fu">min</span>(UKdiff), <span class="at">count=</span><span class="fu">n</span>(), <span class="at">Average=</span><span class="fu">mean</span>(UKdiff))</span>
 <span id="cb101-5"><a href="introduction-to-r.html#cb101-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb101-6"><a href="introduction-to-r.html#cb101-6" aria-hidden="true" tabindex="-1"></a>Life_expectancy2_group</span></code></pre></div>
-<pre><code>## # A tibble: 2 x 4
+<pre><code>## # A tibble: 2 × 4
 ##   UKcompare        range count Average
 ##   &lt;chr&gt;            &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt;
 ## 1 above UK average 5.25     25   1.52 
@@ -1188,7 +1181,7 @@ Here we need to:</p>
 <span id="cb103-15"><a href="introduction-to-r.html#cb103-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">count=</span><span class="fu">n</span>())</span>
 <span id="cb103-16"><a href="introduction-to-r.html#cb103-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb103-17"><a href="introduction-to-r.html#cb103-17" aria-hidden="true" tabindex="-1"></a>Life_expectancy3</span></code></pre></div>
-<pre><code>## # A tibble: 7 x 2
+<pre><code>## # A tibble: 7 × 2
 ##   UKcompare                            count
 ##   &lt;chr&gt;                                &lt;int&gt;
 ## 1 below UK average by -1 years             3
@@ -1211,21 +1204,21 @@ Here we need to:</p>
 ##   # Good
 ##   data %&gt;% select(where(is.numeric))
 ## 
-## i Please update your code.
+## ℹ Please update your code.
 ## This message is displayed once per session.</code></pre>
 <p>Before you move on consider what you have learnt about <code>dplyr</code> in relation to this concept map <a href="https://github.com/rstudio/concept-maps">by Greg Wilson</a>. The teaching team will also explain it…</p>
 <p><img src="prac2_images/dplyr.svg" width="600pt" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="plotting" class="section level3" number="2.5.6">
-<h3><span class="header-section-number">2.5.6</span> Plotting</h3>
+<div id="plotting" class="section level3 hasAnchor" number="2.5.6">
+<h3><span class="header-section-number">2.5.6</span> Plotting<a href="introduction-to-r.html#plotting" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>For a simple and quick plot, we can use the <code>plot()</code> function…</p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="introduction-to-r.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(LondonBoroughs<span class="sc">$</span>male_life_expectancy_2009_13,</span>
 <span id="cb107-2"><a href="introduction-to-r.html#cb107-2" aria-hidden="true" tabindex="-1"></a>     LondonBoroughs<span class="sc">$</span>percent_children_in_reception_year_who_are_obese_2011_12_to_2013_14)</span></code></pre></div>
 <p><img src="CASA0005_files/figure-html/unnamed-chunk-127-1.png" width="672" /></p>
 </div>
-<div id="pimp-my-graph" class="section level3" number="2.5.7">
-<h3><span class="header-section-number">2.5.7</span> Pimp my graph!</h3>
+<div id="pimp-my-graph" class="section level3 hasAnchor" number="2.5.7">
+<h3><span class="header-section-number">2.5.7</span> Pimp my graph!<a href="introduction-to-r.html#pimp-my-graph" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Now, of course, because this is R, we can pimp this graph using something a bit more fancy than the base graphics functions. Here we will use <code>plotly</code> an open source interactive graphing library…</p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="introduction-to-r.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;plotly&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="introduction-to-r.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(plotly)</span>
@@ -1238,11 +1231,11 @@ Here we need to:</p>
 <span id="cb109-8"><a href="introduction-to-r.html#cb109-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">text =</span> <span class="sc">~</span>borough, </span>
 <span id="cb109-9"><a href="introduction-to-r.html#cb109-9" aria-hidden="true" tabindex="-1"></a>        <span class="at">type =</span> <span class="st">&quot;scatter&quot;</span>, </span>
 <span id="cb109-10"><a href="introduction-to-r.html#cb109-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">mode =</span> <span class="st">&quot;markers&quot;</span>)</span></code></pre></div>
-<div id="htmlwidget-ed03d39426058ca7d864" style="width:672px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ed03d39426058ca7d864">{"x":{"visdat":{"c5887a62ef":["function () ","plotlyVisDat"]},"cur_data":"c5887a62ef","attrs":{"c5887a62ef":{"x":{},"y":{},"text":{},"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"male_life_expectancy_2009_13"},"yaxis":{"domain":[0,1],"automargin":true,"title":"percent_children_in_reception_year_who_are_obese_2011_12_to_2013_14","type":"category","categoryorder":"array","categoryarray":["10.2","10.3","10.6","11.0","11.1","11.2","11.5","11.6","12.2","12.5","12.7","12.8","13.2","13.3","13.6","5.7","6.0","7.8","8.1","9.0","9.2","9.5","9.6","9.8"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"x":[84.3,77.7,81.9,80.3,80,81.3,81.1,80,79.9,80.6,78.7,78.2,79.1,80.1,82.4,79.8,80.4,79.7,78.2,82.6,81.3,78.4,78.7,80.3,78.5,80.7,81.9,78.6,80.8,77.5,79.7,79.2,81.7],"y":["11.1","13.6","9.5","11.6","12.2","7.8","9.8","11.1","11.2","12.7","13.2","13.3","10.2","11.1","9.6","10.3","9.6","11.2","10.6","9.2","6.0","11.5","11.0","9.0","12.5","10.6","5.7","12.8","8.1","12.7","10.6","9.2","11.1"],"text":["City of London","Barking and Dagenham","Barnet","Bexley","Brent","Bromley","Camden","Croydon","Ealing","Enfield","Greenwich","Hackney","Hammersmith and Fulham","Haringey","Harrow","Havering","Hillingdon","Hounslow","Islington","Kensington and Chelsea","Kingston upon Thames","Lambeth","Lewisham","Merton","Newham","Redbridge","Richmond upon Thames","Southwark","Sutton","Tower Hamlets","Waltham Forest","Wandsworth","Westminster"],"mode":"markers","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9eb00c74fa71d127b56a" style="width:672px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9eb00c74fa71d127b56a">{"x":{"visdat":{"50c46b53ee3":["function () ","plotlyVisDat"]},"cur_data":"50c46b53ee3","attrs":{"50c46b53ee3":{"x":{},"y":{},"text":{},"mode":"markers","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"male_life_expectancy_2009_13"},"yaxis":{"domain":[0,1],"automargin":true,"title":"percent_children_in_reception_year_who_are_obese_2011_12_to_2013_14","type":"category","categoryorder":"array","categoryarray":["10.2","10.3","10.6","11.0","11.1","11.2","11.5","11.6","12.2","12.5","12.7","12.8","13.2","13.3","13.6","5.7","6.0","7.8","8.1","9.0","9.2","9.5","9.6","9.8"]},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[84.3,77.7,81.9,80.3,80,81.3,81.1,80,79.9,80.6,78.7,78.2,79.1,80.1,82.4,79.8,80.4,79.7,78.2,82.6,81.3,78.4,78.7,80.3,78.5,80.7,81.9,78.6,80.8,77.5,79.7,79.2,81.7],"y":["11.1","13.6","9.5","11.6","12.2","7.8","9.8","11.1","11.2","12.7","13.2","13.3","10.2","11.1","9.6","10.3","9.6","11.2","10.6","9.2","6.0","11.5","11.0","9.0","12.5","10.6","5.7","12.8","8.1","12.7","10.6","9.2","11.1"],"text":["City of London","Barking and Dagenham","Barnet","Bexley","Brent","Bromley","Camden","Croydon","Ealing","Enfield","Greenwich","Hackney","Hammersmith and Fulham","Haringey","Harrow","Havering","Hillingdon","Hounslow","Islington","Kensington and Chelsea","Kingston upon Thames","Lambeth","Lewisham","Merton","Newham","Redbridge","Richmond upon Thames","Southwark","Sutton","Tower Hamlets","Waltham Forest","Wandsworth","Westminster"],"mode":"markers","type":"scatter","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="spatial-data-in-r" class="section level3" number="2.5.8">
-<h3><span class="header-section-number">2.5.8</span> Spatial Data in R</h3>
+<div id="spatial-data-in-r" class="section level3 hasAnchor" number="2.5.8">
+<h3><span class="header-section-number">2.5.8</span> Spatial Data in R<a href="introduction-to-r.html#spatial-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>This next part of the practical applies the same principles introduced above to the much more complex problem of handling spatial data within R.</p>
 <p>In the remainder of this practical we will produce a map, the focus here is getting to grips with some of R’s visulisation tools and not sound analysis (I know one is useless without the other!). Good quality spatial analysis will come in the rest of the module.</p>
 <p>Whilst the instructions are step by step you are encouraged to start deviating from them (trying different colours for example) to get a better understanding of what we are doing.</p>
@@ -1274,15 +1267,15 @@ Here we need to:</p>
 <span id="cb112-10"><a href="introduction-to-r.html#cb112-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
 <span id="cb112-11"><a href="introduction-to-r.html#cb112-11" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rgdal)</span>
 <span id="cb112-12"><a href="introduction-to-r.html#cb112-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geojsonio)</span></code></pre></div>
-<div id="background-to-spatial-data-in-r" class="section level4" number="2.5.8.1">
-<h4><span class="header-section-number">2.5.8.1</span> Background to spatial data in R</h4>
+<div id="background-to-spatial-data-in-r" class="section level4 hasAnchor" number="2.5.8.1">
+<h4><span class="header-section-number">2.5.8.1</span> Background to spatial data in R<a href="introduction-to-r.html#background-to-spatial-data-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>R has a very well developed ecosystem of packages for working with Spatial Data. Early pioneers like Roger Bivand and Edzer Pebesma along with various colleagues were instrumental in writing packages to interface with some powerful open source libraries for working with spatial data, such as GDAL and GEOS. These were accessed via the <code>rgdal</code> and <code>rgeos</code> packages. The <code>maptools</code> package by Roger Bivand, amongst other things, allowed Shapefiles to be read into R. The <code>sp</code> package (along with <code>spdep</code>) by Edzer Pebesma was very important for defining a series of classes and methods for spatial data natively in R which then allowed others to write software to work with these formats. Other packages like <code>raster</code> advanced the analysis of gridded spatial data, while packages like <code>classInt</code> and <code>RColorbrewer</code> facilitated the binning of data and colouring of choropleth maps.</p>
 <p>Whilst these packages were extremely important for advancing spatial data analysis in R, they were not always the most straightforward to use — making a map in R could take quite a lot of effort and they were static and visually basic. However, more recently new packages have arrived to change this. Now <code>leaflet</code> enables R to interface with the leaflet javascript library for online, dynamic maps. <code>ggplot2</code> which was developed by Hadley Wickham and colleagues radically changed the way that people thought about and created graphical objects in R, including maps, and introduced a graphical style which has been the envy of other software to the extent that there are now libraries in Python which copy the <code>ggplot2</code> style!</p>
 <p><img src="allisonhorst_images/ggplot2_exploratory.png" width="450pt" style="display: block; margin: auto;" /></p>
 <p>Building on all of these, the new <code>tmap</code> (Thematic Map) package has changed the game completely and now enables us to read, write and manipulate spatial data and produce visually impressive and interactive maps, very easily. In parallel, the <code>sf</code> (Simple Features) package is helping us re-think the way that spatial data can be stored and manipulated. It’s exciting times for geographic information / spatial data science!</p>
 </div>
-<div id="making-some-choropleth-maps" class="section level4" number="2.5.8.2">
-<h4><span class="header-section-number">2.5.8.2</span> Making some choropleth maps</h4>
+<div id="making-some-choropleth-maps" class="section level4 hasAnchor" number="2.5.8.2">
+<h4><span class="header-section-number">2.5.8.2</span> Making some choropleth maps<a href="introduction-to-r.html#making-some-choropleth-maps" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Choropleth maps are thematic maps which colour areas according to some phenomenon. In our case, we are going to fill some irregular polygons (the London Boroughs) with a colour that corresponds to a particular attribute.</p>
 <p>As with all plots in R, there are multiple ways we can do this. The basic <code>plot()</code> function requires no data preparation but additional effort in colour selection/ adding the map key etc. Quick plot (<code>qplot()</code>) and <code>ggplot()</code> (installed in the <code>ggplot2</code> package, part of the <code>tidyverse</code>) require some additional steps to format the spatial data but select colours and add keys etc automatically. Qplot is basically a shortcut for a quick map / plot, but if you have a lot of data use <code>ggplot()</code>. However, here, we are going to make use of the new <code>tmap</code> package which makes making maps very easy indeed. More on <code>tmap</code> when we start mapping..</p>
 <ol style="list-style-type: decimal">
@@ -1307,14 +1300,15 @@ Here we need to:</p>
 <span id="cb114-5"><a href="introduction-to-r.html#cb114-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb114-6"><a href="introduction-to-r.html#cb114-6" aria-hidden="true" tabindex="-1"></a><span class="co"># shapefile in local folder</span></span>
 <span id="cb114-7"><a href="introduction-to-r.html#cb114-7" aria-hidden="true" tabindex="-1"></a>EW <span class="ot">&lt;-</span> <span class="fu">st_read</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">&quot;prac2_data&quot;</span>,</span>
-<span id="cb114-8"><a href="introduction-to-r.html#cb114-8" aria-hidden="true" tabindex="-1"></a>                        <span class="st">&quot;Local_Authority_Districts__December_2015__Boundaries-shp&quot;</span>,</span>
-<span id="cb114-9"><a href="introduction-to-r.html#cb114-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">&quot;Local_Authority_Districts__December_2015__Boundaries.shp&quot;</span>))</span></code></pre></div>
-<pre><code>## Reading layer `Local_Authority_Districts__December_2015__Boundaries&#39; from data source `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\2020_2021\CASA0005repo\prac2_data\Local_Authority_Districts__December_2015__Boundaries-shp\Local_Authority_Districts__December_2015__Boundaries.shp&#39; using driver `ESRI Shapefile&#39;
+<span id="cb114-8"><a href="introduction-to-r.html#cb114-8" aria-hidden="true" tabindex="-1"></a>                                             <span class="st">&quot;Local_Authority_Districts_(December_2015)_Boundaries&quot;</span>,</span>
+<span id="cb114-9"><a href="introduction-to-r.html#cb114-9" aria-hidden="true" tabindex="-1"></a>                        <span class="st">&quot;Local_Authority_Districts_(December_2015)_Boundaries.shp&quot;</span>))</span></code></pre></div>
+<pre><code>## Reading layer `Local_Authority_Districts_(December_2015)_Boundaries&#39; from data source `C:\Users\Andy\OneDrive - University College London\Teaching\CASA0005\2020_2021\CASA0005repo\prac2_data\Local_Authority_Districts_(December_2015)_Boundaries\Local_Authority_Districts_(December_2015)_Boundaries.shp&#39; 
+##   using driver `ESRI Shapefile&#39;
 ## Simple feature collection with 380 features and 6 fields
-## geometry type:  MULTIPOLYGON
-## dimension:      XY
-## bbox:           xmin: 5513 ymin: 5333.602 xmax: 655989 ymax: 1220302
-## projected CRS:  OSGB 1936 / British National Grid</code></pre>
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: 5513 ymin: 5333.602 xmax: 655989 ymax: 1220302
+## Projected CRS: OSGB 1936 / British National Grid</code></pre>
 <p>Pull out London using the <code>str_detect()</code> function from the <code>stringr</code> package in combination with <code>filter()</code> from <code>dplyr</code> (again!). We will look for the bit of the district code that relates to London (E09) from the ‘lad15cd’ column data frame of our <code>sf</code> object.</p>
 <div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="introduction-to-r.html#cb116-1" aria-hidden="true" tabindex="-1"></a>LondonMap<span class="ot">&lt;-</span> EW <span class="sc">%&gt;%</span></span>
 <span id="cb116-2"><a href="introduction-to-r.html#cb116-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(lad15cd, <span class="st">&quot;^E09&quot;</span>))</span>
@@ -1323,8 +1317,8 @@ Here we need to:</p>
 <span id="cb116-5"><a href="introduction-to-r.html#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="fu">qtm</span>(LondonMap)</span></code></pre></div>
 <p><img src="CASA0005_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
 </div>
-<div id="attribute-data" class="section level4" number="2.5.8.3">
-<h4><span class="header-section-number">2.5.8.3</span> Attribute data</h4>
+<div id="attribute-data" class="section level4 hasAnchor" number="2.5.8.3">
+<h4><span class="header-section-number">2.5.8.3</span> Attribute data<a href="introduction-to-r.html#attribute-data" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>OK, enough messing around, show us the maps!!</p>
 <ol style="list-style-type: decimal">
 <li>Hold your horses, before be can create a map, we need to join some attribute data to some boundaries, let’s do it with <code>merge()</code>, but first clean up all of our names with <code>Janitor</code> again.</li>
@@ -1346,10 +1340,10 @@ Here we need to:</p>
 <p>We’ve added some more arguments to <code>distinct()</code> that mean we only have unique rows based on the code, but we keep all other variables <code>.keep_all=TRUE</code>. If you change to <code>.keep_all=FALSE</code> (which is the default) then all the other variables will be removed.</p>
 <p>An alternative to <code>merge()</code> would be to use a <code>left_join()</code> (like in SQL)…but it’s the same thing as <code>merge()</code>.</p>
 <p><img src="prac2_images/sql-joins.png" width="500px" style="display: block; margin: auto;" /></p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-139"></span>
-<img src="prac2_images/left-join.gif" alt="Taken from Tidy explain by Garrick Aden-Buie" width="500px" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-139"></span>
+<img src="prac2_images/left-join.gif" alt="Taken from Tidy explain by Garrick Aden‑Buie" width="500px" />
 <p class="caption">
-Figure 2.1: Taken from Tidy explain by Garrick Aden-Buie
+Figure 2.1: Taken from Tidy explain by Garrick Aden‑Buie
 </p>
 </div>
 <div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="introduction-to-r.html#cb118-1" aria-hidden="true" tabindex="-1"></a>BoroughDataMap2 <span class="ot">&lt;-</span> EW <span class="sc">%&gt;%</span> </span>
@@ -1359,17 +1353,17 @@ Figure 2.1: Taken from Tidy explain by Garrick Aden-Buie
 <span id="cb118-5"><a href="introduction-to-r.html#cb118-5" aria-hidden="true" tabindex="-1"></a>            LondonData,</span>
 <span id="cb118-6"><a href="introduction-to-r.html#cb118-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">by =</span> <span class="fu">c</span>(<span class="st">&quot;lad15cd&quot;</span> <span class="ot">=</span> <span class="st">&quot;new_code&quot;</span>))</span></code></pre></div>
 <p>If there are mutliple matches then all hits are returned…</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-141"></span>
-<img src="prac2_images/left-join-extra.gif" alt="Taken from Tidy explain by Garrick Aden-Buie" width="500px" />
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-141"></span>
+<img src="prac2_images/left-join-extra.gif" alt="Taken from Tidy explain by Garrick Aden‑Buie" width="500px" />
 <p class="caption">
-Figure 2.2: Taken from Tidy explain by Garrick Aden-Buie
+Figure 2.2: Taken from Tidy explain by Garrick Aden‑Buie
 </p>
 </div>
 <p>However, i’ve left out <code>filter()</code> and <code>distinct()</code> which you would need to reduce the data to London and remove the duplicate City of London row afterwards…like in the step before with <code>merge</code> and as we did earlier on in the session.</p>
 </div>
 </div>
-<div id="simple-mapping" class="section level3" number="2.5.9">
-<h3><span class="header-section-number">2.5.9</span> Simple mapping</h3>
+<div id="simple-mapping" class="section level3 hasAnchor" number="2.5.9">
+<h3><span class="header-section-number">2.5.9</span> Simple mapping<a href="introduction-to-r.html#simple-mapping" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><code>tmap</code> follows the idea of the grammar of graphics, similar to <code>dplyr</code> being the grammar of data manipulation. Essentially with the grammar of graphics the main data being mapped defines the location somewhere on Earth (loaded with <code>tm_shape</code>). Map aesthetics are then defined with a <code>+</code>, these usually include <code>tm_fill()</code> (fill of the polygons based on a variable) + <code>tm_borders()</code> (border of polygons). However, <code>tm_polygon</code> basically combines <code>tm_fill()</code> and <code>tm_borders()</code>…</p>
 <p>So to conclude, data first then <code>+</code> aesthetic syntax.</p>
 <p>We’re going to create a simple map with our spatial data, mapping and cartographic practice are covered in much more detail later in the course, but for now…</p>
@@ -1445,8 +1439,8 @@ Figure 2.2: Taken from Tidy explain by Garrick Aden-Buie
 </ul>
 </div>
 </div>
-<div id="tidying-data" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Tidying data</h2>
+<div id="tidying-data" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Tidying data<a href="introduction-to-r.html#tidying-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As you progress through the programme you will probably notice that there is pretty much a tool or function for anything you could want. However, there has been little reserach into creating a standardised approach for wrangling data into a common format for analysis. This is where <a href="https://www.jstatsoft.org/article/view/v059i10">Hadley Wickham’s tidy data comes in</a>. As per the <a href="https://r4ds.had.co.nz/tidy-data.html">R for Data Science book</a>, tidy data is defined using the following three rules:</p>
 <ol style="list-style-type: decimal">
 <li><p>Each variable must have its own column.</p></li>
@@ -1458,14 +1452,14 @@ Figure 2.2: Taken from Tidy explain by Garrick Aden-Buie
 <li><p>Put each dataset in a tibble</p></li>
 <li><p>Put each variable in a column</p></li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-147"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-147"></span>
 <img src="prac2_images/tidy-1.png" alt="This figure is taken directly from Grolemund and Wickham (2017) Chapter 12.Following three rules makes a dataset tidy: variables are in columns, observations are in rows, and values are in cells." width="500px" />
 <p class="caption">
 Figure 2.3: This figure is taken directly from Grolemund and Wickham (2017) Chapter 12.Following three rules makes a dataset tidy: variables are in columns, observations are in rows, and values are in cells.
 </p>
 </div>
 <p>However, i also find this example from <a href="https://www.ksk-anl.com/blog/hadley-wickhams-tidy-data-in-rapidminer-part-1/">KSK analytics</a> very helpful..</p>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-148"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-148"></span>
 <img src="prac2_images/messy-tidy-ex.png" alt="This figure is taken directly from Grolemund and Wickham (2017) Chapter 12.Following three rules makes a dataset tidy: variables are in columns, observations are in rows, and values are in cells." width="500px" />
 <p class="caption">
 Figure 2.4: This figure is taken directly from Grolemund and Wickham (2017) Chapter 12.Following three rules makes a dataset tidy: variables are in columns, observations are in rows, and values are in cells.
@@ -1529,8 +1523,8 @@ Figure 2.4: This figure is taken directly from Grolemund and Wickham (2017) Chap
 <p>For another quick worked example have a look at the <a href="https://rladiessydney.org/courses/ryouwithme/02-cleanitup-5/">RLadies Sydney blog post on pivoting</a></p>
 <p>What’s the take home from this? Basically always try to put your data into a certain format before doing further analysis on it as it will be easier for you to determine the right tools to select.</p>
 </div>
-<div id="feedback-1" class="section level2" number="2.7">
-<h2><span class="header-section-number">2.7</span> Feedback</h2>
+<div id="feedback-1" class="section level2 hasAnchor" number="2.7">
+<h2><span class="header-section-number">2.7</span> Feedback<a href="introduction-to-r.html#feedback-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Was anything that we explained unclear this week or was something really clear…let us know using the <a href="https://forms.gle/w2GUDYc7tSavGy7r6">feedback form</a>. It’s anonymous and we’ll use the responses to clear any issues up in the future / adapt the material.</p>
 
 </div>
@@ -1545,7 +1539,6 @@ Figure 2.4: This figure is taken directly from Grolemund and Wickham (2017) Chap
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1585,6 +1578,10 @@ gitbook.start({
 "text": null
 },
 "download": ["https://github.com/andrewmaclachlan/CASA0005repo/raw/master/02-prac2.Rmd"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

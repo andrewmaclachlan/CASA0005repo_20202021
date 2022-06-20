@@ -171,7 +171,7 @@ listlandsat<-dir_info(here::here("prac7_data", "Lsatdata"))%>%
 # Load the manchester boundary
 manchester_boundary <- st_read(here::here("prac7_data", 
                                           "Manchester_boundary",
-                                          "Manchester_boundary.shp"))
+                                          "manchester_boundary.shp"))
 
 #check they have the same Coordinate Reference System (CRS)
 crs(manchester_boundary)
@@ -212,12 +212,14 @@ writeRaster(.,str_c(here::here("prac7_data",
 1. Load band 8 and add it to our raster stack
 
 ```{r, cache=TRUE}
-b8backin<-dir_info(here::here("prac7_data", "Lsatdata"))%>%
-  dplyr::filter(str_detect(path, "[B8].tif")) %>%
+library(fs)
+b8backin<-dir_info(here::here("prac8_data", "Lsatdata"))%>%
+  dplyr::filter(path == "C:/Users/Andy/OneDrive - University College London/Teaching/CASA0005/2020_2021/CASA0005repo/prac8_data/Lsatdata/LC08_L1TP_203023_20190513_20190521_01_T1_B8.tif") %>%
   dplyr::select(path)%>%
   pull()%>%
   as.character()%>%
   raster()
+  
   
 listlandsat <- listlandsat %>%
   addLayer(., b8backin)
@@ -271,7 +273,7 @@ As i can't upload my Landsat files to GitHub i'm storing them in a folder that i
 lsatmask %>%
   writeRaster(., names(lsatmask), 
               bylayer=TRUE, 
-              format='GTiff', 
+              format='raster', 
               overwrite=TRUE)
 ```
 
@@ -281,7 +283,7 @@ For me though it's:
 lsatmask %>%
   writeRaster(., outputfilenames, 
               bylayer=TRUE, 
-              format='GTiff', 
+              format='raster', 
               overwrite=TRUE)
 ```
 
@@ -297,7 +299,7 @@ Here i write out each raster layer individually though specifying ```bylayer=TRU
 # either read them back in from the saved file:
 
 manc_files<-dir_info(here::here("prac7_data", "Lsatdata", "mask")) %>%
-  dplyr::filter(str_detect(path, "[B1234567]_mask.tif")) %>%
+  dplyr::filter(str_detect(path, "[B1234567]_mask.grd")) %>%
   dplyr::filter(str_detect(path, "B11", negate=TRUE))%>%
   dplyr::select(path)%>%
   pull()%>%

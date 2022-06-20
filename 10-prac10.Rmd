@@ -76,9 +76,9 @@ listfiles<-dir_info(here::here("prac10_data")) %>%
 
 Using a recent update we could also change this a bit with the `pins()` package that downloads and caches the url and automatically checks for file changes, only re-downloading if needed!
 
-```{r, cache=FALSE, warning=FALSE, message=FALSE, results=FALSE}
+```{r, cache=FALSE, warning=FALSE, message=FALSE, results=FALSE, eval=FALSE}
 library(pins)
-pinexample<-pin("https://data.london.gov.uk/download/statistical-gis-boundary-files-london/9ba8c833-6370-4b11-abdc-314aa020d5e0/statistical-gis-boundaries-london.zip")
+pinexample<-pins::pin("https://data.london.gov.uk/download/statistical-gis-boundary-files-london/9ba8c833-6370-4b11-abdc-314aa020d5e0/statistical-gis-boundaries-london.zip")
 ```
 
 `pins()` also lets you share data easily, [have a look the RStudio pins blog post](https://blog.rstudio.com/2019/09/09/pin-discover-and-share-resources/) for more information.
@@ -115,7 +115,7 @@ qtm(boroughsandwardssf[[2]])
 1. Get the data for Airbnb
 
 ```{r, cache=FALSE, warning=FALSE, message=FALSE, output=FALSE}
-Airbnb <- read_csv("http://data.insideairbnb.com/united-kingdom/england/london/2019-07-10/visualisations/listings.csv")
+Airbnb <- read_csv("http://data.insideairbnb.com/united-kingdom/england/london/2022-03-09/data/listings.csv.gz")
 ```
  
 1. And for OSM we'll download it from geofabrik, you can also use the OSM Application Programming Interface (API) but there is a limit on the number of points downloadable per call so you'd have to do something a bit more complicated to get the whole of London...however, I have provided an example of the api call.

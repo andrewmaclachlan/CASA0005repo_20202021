@@ -6,11 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Hello GIS | CASA0005 Geographic Information Systems and Science</title>
   <meta name="description" content="The CASA0005 Geographic Information Systems and Science practical book" />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Hello GIS | CASA0005 Geographic Information Systems and Science" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://andrewmaclachlan.github.io/CASA0005repo/" />
   <meta property="og:image" content="https://andrewmaclachlan.github.io/CASA0005repo//general_images/casa_logo.png" />
   <meta property="og:description" content="The CASA0005 Geographic Information Systems and Science practical book" />
   <meta name="github-repo" content="andrewmaclachlan/CASA0005repo" />
@@ -24,7 +23,7 @@
 <meta name="author" content="Andy MacLachlan and Adam Dennett" />
 
 
-<meta name="date" content="2021-05-06" />
+<meta name="date" content="2022-06-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,8 +32,8 @@
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
 <link rel="prev" href="index.html"/>
 <link rel="next" href="software-installation.html"/>
-<script src="libs/header-attrs-2.7/header-attrs.js"></script>
-<script src="libs/jquery-3.5.1/jquery.min.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,36 +49,36 @@
 
 
 
-
-<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.17/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="libs/datatables-binding-0.23/datatables.js"></script>
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.11.3/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.11.3/js/jquery.dataTables.min.js"></script>
 <link href="libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet" />
 <script src="libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
 <link href="libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet" />
 <script src="libs/selectize-0.12.0/selectize.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
-<script src="libs/plotly-binding-4.9.3/plotly.js"></script>
+<link href="libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<script src="libs/plotly-binding-4.10.0/plotly.js"></script>
 <script src="libs/typedarray-0.1/typedarray.min.js"></script>
-<link href="libs/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
-<script src="libs/plotly-main-1.57.1/plotly-latest.min.js"></script>
+<link href="libs/plotly-htmlwidgets-css-2.5.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="libs/plotly-main-2.5.1/plotly-latest.min.js"></script>
 <link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
 <script src="libs/proj4-2.6.2/proj4.min.js"></script>
 <script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
 <link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script>
 <script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
-<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/leaflet-providers-plugin-2.1.1/leaflet-providers-plugin.js"></script>
 <script src="libs/clipboard-0.0.1/setClipboardText.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151934476-1"></script>
@@ -617,8 +616,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="hello-gis" class="section level1 unnumbered">
-<h1>Hello GIS</h1>
+<div id="hello-gis" class="section level1 unnumbered hasAnchor">
+<h1>Hello GIS<a href="hello-gis.html#hello-gis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Spatial analysis can yield fascinating insights into geographical relationships. However, at times it can be difficult to work with. You will get lots of error messages and have software crash. The academic staff are here to help you work through these practicals but we do not know everything. It’s a good idea to become familar with online sources of help, such as:</p>
 <ul>
 <li><a href="https://stackexchange.com/">Stack Exchange</a></li>
@@ -628,10 +627,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://support.esri.com/en">ArcGIS help pages</a></li>
 </ul>
 <p>Want to see what you can do with spatial analysis…check out this ‘What’s Next’ video produced for the ESRI conference…</p>
-<iframe src="https://www.youtube.com/embed/K0qZffiKwak" width="672" height="400px">
+<iframe src="https://www.youtube.com/embed/K0qZffiKwak" width="672" height="400px" data-external="1">
 </iframe>
-<div id="intended-course-learning-outcomes" class="section level2 unnumbered">
-<h2>Intended course learning outcomes</h2>
+<div id="intended-course-learning-outcomes" class="section level2 unnumbered hasAnchor">
+<h2>Intended course learning outcomes<a href="hello-gis.html#intended-course-learning-outcomes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>After having taking this module, you should be able to:</p>
 <ul>
 <li><p>Develop a working knowledge of QGIS and R to support the application of GI Science techniques</p></li>
@@ -647,8 +646,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>This is a 15 credit module, equivalent to 150 hours of study (including the taught sessions). Outside of our lectures and practical sessions (3 hours a week) <strong>you should be spending an extra 12 hours a week on this module</strong>.</p>
 </div>
 </div>
-<div id="how-to-use-this-book" class="section level2 unnumbered">
-<h2>How to use this book</h2>
+<div id="how-to-use-this-book" class="section level2 unnumbered hasAnchor">
+<h2>How to use this book<a href="hello-gis.html#how-to-use-this-book" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>To get the most out of this book spend a few minutes learning how to control it, in the top right of this webpage you will see this tools bar:</p>
 <p><img src="general_images/Book_controls.png" width="600pt" style="display: block; margin: auto;" /></p>
 <p>From left to right these buttons will let you:</p>
@@ -662,20 +661,20 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>In addition the <i class="fa fa-github fa-lg"></i> icon in the top right of the page takes you to the GitHub repository for this book, we cover GitHub in the course, but it’s basically where the online files for the book are stored.</p>
 </div>
-<div id="getting-started" class="section level2 unnumbered">
-<h2>Getting started</h2>
+<div id="getting-started" class="section level2 unnumbered hasAnchor">
+<h2>Getting started<a href="hello-gis.html#getting-started" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>One of the issues with GIS is that many of the files we will be working with are quite large. Fortunately in recent years UCL has seriously beefed up the storage available for students. You now get 100GB of free storage, which should be plenty for the work you will be doing this year! The Bartlett faculty has several gigabytes of storage space available on their central servers, so before we get started, we will connect to our N drive to carry out all of our practical work over the coming weeks.</p>
 <div class="infobox tip">
 <p>The data we use in this practical book is representative of what you will find when conducting independent analysis. Some books and website will give you perfectly ‘clean’ and ‘ready to use’ data, we have not done this on purpose as it’s very important to master data wrangling (also called data manipulation). In the ‘real world’ data is messy and it’s vital you know how to deal with it. Take this quote from the <a href="https://www.nytimes.com/2014/08/18/technology/for-big-data-scientists-hurdle-to-insights-is-janitor-work.html">New York Times</a> for example…</p>
 <p><em>“Data scientists, according to interviews and expert estimates, spend from 50 percent to 80 percent of their time mired in this more mundane labor of collecting and preparing unruly digital data, before it can be explored for useful nuggets.”</em></p>
 </div>
 </div>
-<div id="how-to-download-data-and-files-from-github" class="section level2 unnumbered">
-<h2>How to download data and files from GitHub</h2>
+<div id="how-to-download-data-and-files-from-github" class="section level2 unnumbered hasAnchor">
+<h2>How to download data and files from GitHub<a href="hello-gis.html#how-to-download-data-and-files-from-github" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The majority of data required for the workshops is found online and we detail how to download this within the workshops. On occasion you may need to get some data from my GitHub, the workshops will instruct you to do this where needed.</p>
 <p>To do so you have a few options. Option 1 will let you download just a spceific folder whilst option 2 will download everything i have used to make the workshops.</p>
-<div id="option-1" class="section level3 unnumbered">
-<h3>Option 1</h3>
+<div id="option-1" class="section level3 unnumbered hasAnchor">
+<h3>Option 1<a href="hello-gis.html#option-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Use <a href="https://minhaskamal.github.io/DownGit/#/home">DownGit</a></p>
 <ol style="list-style-type: decimal">
 <li><p>Go to: <a href="https://minhaskamal.github.io/DownGit/#/home" class="uri">https://minhaskamal.github.io/DownGit/#/home</a></p></li>
@@ -684,8 +683,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Paste it into DownGit and click Download, once downloaded then unzip the folder.</p></li>
 </ol>
 </div>
-<div id="option-2" class="section level3 unnumbered">
-<h3>Option 2</h3>
+<div id="option-2" class="section level3 unnumbered hasAnchor">
+<h3>Option 2<a href="hello-gis.html#option-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
 <li><p>Go to the online repository page here: <a href="https://github.com/andrewmaclachlan/CASA0005repo" class="uri">https://github.com/andrewmaclachlan/CASA0005repo</a></p></li>
 <li><p>Click Clone or download, the download as ZIP. This will download the everything i have used to make this website including all the data for the practicals</p></li>
@@ -693,13 +692,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_images/downloadrepo.png" width="500pt" style="display: block; margin: auto;" /></p>
 </div>
 </div>
-<div id="self-guided-learning" class="section level2 unnumbered">
-<h2>Self guided learning</h2>
+<div id="self-guided-learning" class="section level2 unnumbered hasAnchor">
+<h2>Self guided learning<a href="hello-gis.html#self-guided-learning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The lectures and practicals of this course only form a part of the learning process. You are expected to undertake wider reading and explore new methods and approaches. We have provided guidance on useful resources throughout the course to use as a starting point but you are encouraged to go beyond our recommedations and fully engage with applied GIS research, methods and visualisation techniques.</p>
 <p>If you find a practical particularly easy or straightforward then please move on to the next one. Practicals that look at analytical relationships also have extension activities for you to try.</p>
 </div>
-<div id="interactive-lectures" class="section level2 unnumbered">
-<h2>Interactive lectures</h2>
+<div id="interactive-lectures" class="section level2 unnumbered hasAnchor">
+<h2>Interactive lectures<a href="hello-gis.html#interactive-lectures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>During the lectures we will be using an interative polling and Q&amp;A application called vevox. It’s very simple to use, you can either:</p>
 <ul>
 <li>Download the app on iOS or Android: <a href="http://get.vevox.app" class="uri">http://get.vevox.app</a></li>
@@ -707,8 +706,8 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>The meeting ID we will use is: 186-395-009</p>
 </div>
-<div id="more-help" class="section level2 unnumbered">
-<h2>More help</h2>
+<div id="more-help" class="section level2 unnumbered hasAnchor">
+<h2>More help<a href="hello-gis.html#more-help" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>If you need specific assistance with this course please:</p>
 <ul>
 <li><p>Check the Moodle assessment tab for queries relating to assignments / deadlines. There is also an expected assignment timeline and frequently asked questions section within the assessment outline document.</p></li>
@@ -742,17 +741,17 @@ You're doing it right if you get frustrated: if you're not frustrated, you're (p
 <p><a href="https://dr-d-casa.youcanbook.me">Adam</a></p>
 <p>If you give us minimal information in this form (e.g. one word) we will cancel the meeting.</p>
 </div>
-<div id="noticed-a-mistake" class="section level2 unnumbered">
-<h2>Noticed a mistake?</h2>
+<div id="noticed-a-mistake" class="section level2 unnumbered hasAnchor">
+<h2>Noticed a mistake?<a href="hello-gis.html#noticed-a-mistake" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>No one is perfect, if you notice a mistake let us know through the <a href="https://github.com/andrewmaclachlan/CASA0005repo/issues">GitHub issues tab</a></p>
 <p>Don’t worry if you are unsure about what GitHub is we cover it in the course.</p>
 </div>
-<div id="assignment-resources" class="section level2 unnumbered">
-<h2>Assignment resources</h2>
+<div id="assignment-resources" class="section level2 unnumbered hasAnchor">
+<h2>Assignment resources<a href="hello-gis.html#assignment-resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Want some tips for resources on your assignment?…. head over to the <a href="assignment-resources-1.html#assignment-resources-1">Assignment resources</a> pages</p>
 </div>
-<div id="reading-list" class="section level2 unnumbered">
-<h2>Reading list</h2>
+<div id="reading-list" class="section level2 unnumbered hasAnchor">
+<h2>Reading list<a href="hello-gis.html#reading-list" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We link to books and resources throughout each practical and in the <a href="assignment-resources-1.html#assignment-resources-1">Assignment resources</a> pages, but a full reading list for the course is provided <a href="https://rl.talis.com/3/ucl/lists/139FBAF8-DACD-60FB-8BDC-E9C9E09BA885.html?lang=en-GB&amp;login=1">on the UCL library reading list page for the course</a>, there is also a link to it over on Moodle.</p>
 <p>We’ve tried to mostly recommend open source and free books, any others are available from the library.</p>
 
@@ -768,7 +767,6 @@ You're doing it right if you get frustrated: if you're not frustrated, you're (p
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -808,6 +806,10 @@ gitbook.start({
 "text": null
 },
 "download": ["https://github.com/andrewmaclachlan/CASA0005repo/raw/master/00-course_info.Rmd"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
